@@ -1,14 +1,15 @@
 {
   "name": "desdinova",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prettier": "npx prettier --write --list-different ."
+    "prettier": "npx prettier --write --list-different .",
+    "release": "release-it"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
@@ -28,15 +29,18 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "@release-it/bumper": "^6.0.1",
+    "@release-it/keep-a-changelog": "^5.0.0",
     "@iconify-json/flowbite": "^1.1.6",
+    "@iconify-json/logos": "^1.1.44",
     "@iconify-json/mdi": "^1.1.68",
     "@iconify-json/ph": "^1.1.14",
-    "@iconify-json/logos": "^1.1.44",
     "@iconify-json/tabler": "^1.1.120",
     "flowbite-typography": "^1.0.3",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.14.0",
-    "prettier-plugin-tailwindcss": "^0.6.6"
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "release-it": "^17.6.0"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
