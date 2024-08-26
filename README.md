@@ -40,6 +40,8 @@
 
 - easier color palettes
 
+----
+
 ## First Steps (deployed publicly in 10 minutes!)
 
 1. Copy this repo into a folder (no other install needed)
@@ -110,6 +112,8 @@
 11. NOTE: If you want to support non-www and www access to the same domain it might be best to setup a custom Cloudflare
     Redirect Rule (https://community.cloudflare.com/t/redirect-the-www-to-non-www/558655)
 
+----
+
 ## Update Logo
 
 - replace `/src/images/logo-square.png` with your square logo
@@ -117,7 +121,7 @@
 
 ## Update Favicon
 
-### Modern Way to implement Favicon 🤩
+### Modern Way to implement Favicon
 
 https://realfavicongenerator.net/svg-favicon/
 
@@ -143,6 +147,8 @@ https://realfavicongenerator.net/svg-favicon/
 ## Update Colors
 
 - ...
+
+----
 
 ## Updating Astro
 
@@ -170,6 +176,8 @@ https://realfavicongenerator.net/svg-favicon/
 1. more than likely I'll just Update Astro (using method included in README), Tailwind and Flowbite, and third party
    packages as needed
 
+----
+
 ## Images
 
 - images put in `src/assets/images` will be optimized by Astro if they are imported
@@ -180,9 +188,10 @@ https://realfavicongenerator.net/svg-favicon/
 
 - put any scripts you need in `Analytics.astro`
 
-## STAGING/PRODUCTION environments support
+## Local/Staging/Production environments support
 
-If you create a `BUILD_MODE` .ENV variable on Cloudflare Pages or locally you can conditionally render code/scripts as
+If you create a `BUILD_MODE` .ENV variable on Cloudflare Pages or locally (copy `.env.example` to `.env`) you can
+conditionally render code/scripts as
 required.
 
 This allows you to conditionally include scripts or HTML as needed per Environment.
@@ -203,6 +212,15 @@ This allows you to conditionally include scripts or HTML as needed per Environme
 }
 
 ```
+
+### Cloudflare Pages Environment Variable Setup
+
+1. Go to your Cloudflare Pages site
+2. Click on "Settings"
+3. Click on "Add variables" or "Edit Variables"
+4. Add variable "BUILD_MODE"
+5. Set value as needed
+6. Fin!
 
 -----
 
