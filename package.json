@@ -9,7 +9,15 @@
     "preview": "astro preview",
     "astro": "astro",
     "prettier": "npx prettier --write --list-different .",
-    "release": "release-it"
+    "release": "release-it",
+    "changelog": "npx auto-changelog --hide-credit -t keepachangelog --sort-commits date-desc"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "keepachangelog",
+    "sort-commits": "date-desc",
+    "unreleased": true,
+    "commitLimit": false
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
