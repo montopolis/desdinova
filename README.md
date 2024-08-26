@@ -1,5 +1,7 @@
 # Desdinova
 
+#### A quick & easy Astro starter website for use with Tailwind, Flowbite and Cloudflare Pages for non-designers
+
 ## Objectives
 
 - Create a modern, clean, and simple website starter for non-designers
@@ -58,12 +60,12 @@
 - Update the `site` field
 
 7. Update the Logo [see below](#update-logo)
-8. Update the Favicon (see below)
-9. Update the Font (if necessary)
-10. Adjust Colors (if necessary)
+8. Update the Favicon [see below](#update-favicon)
+9. Update the Font (if necessary [see below](#update-font))
+10. Adjust Colors (if necessary [see below](#update-colors))
 
 11. Commit all changes and push to Git
-12. Set up Cloudflare Pages for testing (details below)
+12. Set up Cloudflare Pages for testing [see below](#cloudflare-pages-testing)
 13. Done!
 
 ## Next Steps
@@ -88,6 +90,8 @@
 
 ---
 
+<a id="#cloudflare-pages-testing"></a>
+
 ## Setting Up Cloudflare Pages for Testing
 
 1. Sign in or sign up at [Cloudflare Dashboard](https://dash.cloudflare.com)
@@ -101,6 +105,8 @@
 9. Set "Framework Preset" to "Astro"
 10. Click "Save and Deploy"
 11. Done!
+
+<a id="#cloudflare-pages-domain"></a>
 
 ## Setting Up Cloudflare Pages for Your Domain
 
@@ -165,6 +171,8 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
 ---
 
+<a id="#update-astro"></a>
+
 ## Updating Astro
 
 - Stash any pending git updates to start with a clean slate
@@ -188,8 +196,8 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 2. **Tricky:** Apply specific updates from the Desdinova repository to your site as needed
 3. **Full Reboot:** Set up a new Desdinova instance and refactor your existing site into it (this is my annual practice
    for my sites)
-4. Likely, I'll update Astro, Tailwind, Flowbite, and third-party packages as necessary using the methods described in
-   the README
+4. **Most Likely:** I'll update Astro, Tailwind, Flowbite, and third-party packages as necessary
+   using [this approach](#update-astro)
 
 ---
 
