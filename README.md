@@ -40,7 +40,7 @@
 
 - Easier color palette customization
 
-----
+---
 
 ## Getting Started (Get Up & Running in 10 Minutes!)
 
@@ -57,7 +57,7 @@
 - Set the `SITE_*` variables
 - Update the `site` field
 
-7. Update the Logo (see below)
+7. Update the Logo [see below](#update-logo)
 8. Update the Favicon (see below)
 9. Update the Font (if necessary)
 10. Adjust Colors (if necessary)
@@ -86,7 +86,7 @@
 8. Add the new page to the Top or Bottom Menu, or link it elsewhere on the site
 9. Repeat these steps for additional pages
 
-----
+---
 
 ## Setting Up Cloudflare Pages for Testing
 
@@ -118,13 +118,17 @@
 12. Note: To support both www and non-www access, consider setting up a custom Cloudflare Redirect
     Rule. [More info](https://community.cloudflare.com/t/redirect-the-www-to-non-www/558655)
 
-----
+---
+
+<a id="update-logo"></a>
 
 ## Updating the Logo
 
 - Replace `/src/images/logo-square.png` with your square logo
 - Replace `/src/images/logo.png` with your primary logo
 - For further customization, edit `/src/components/SiteLogo.astro`
+
+<a id="update-favicon"></a>
 
 ## Updating the Favicon
 
@@ -134,6 +138,8 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
 - Update `favicon.svg` and `favicon.png` in the `/public` folder
 - Note: Favicon settings are in `/src/components/_core/Head.astro`
+
+<a id="update-font"></a>
 
 ## Updating the Font
 
@@ -151,16 +157,13 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 - Update the CSS styles at the bottom of `/src/Layout/Layout.astro`
 - Modify the font settings in `tailwind.config.mjs`
 
+<a id="update-colors"></a>
+
 ## Updating Colors
 
 - ...
 
-## Announcement Banner
-
-- Customize the banner in `/src/components/Announcement.astro`
-- To disable the banner, comment out `<Announcement />` in `/src/pages/index.astro`
-
-----
+---
 
 ## Updating Astro
 
@@ -188,13 +191,18 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 4. Likely, I'll update Astro, Tailwind, Flowbite, and third-party packages as necessary using the methods described in
    the README
 
-----
+---
 
 ## Image Handling
 
 - Images placed in `/src/assets/images` will be optimized by Astro if imported
 - Refer to [Astro Image Guide](https://docs.astro.build/en/guides/images/#where-to-store-images)
 - Alternatively, store images in the `/public` directory
+
+## Announcement Banner
+
+- Customize the banner in `/src/components/Announcement.astro`
+- To disable the banner, comment out `<Announcement />` in `/src/pages/index.astro`
 
 ## Scripts (e.g., Analytics)
 
@@ -232,7 +240,7 @@ This allows specific scripts or HTML to be included as needed per environment.
 5. Set the value as needed
 6. Done!
 
-----
+---
 
 ## Links to Dependencies
 
@@ -249,7 +257,7 @@ This allows specific scripts or HTML to be included as needed per environment.
 - [Iconify](https://icon-sets.iconify.design/)
 - [Privacy Policy Template](https://github.com/ArthurGareginyan/privacy-policy-template)
 
-----
+---
 
 ## Desdinova
 
@@ -268,7 +276,7 @@ These gravely digs of mine
 Will surely prove a sight
 ```
 
------
+---
 
 ## Huge Thanks To
 

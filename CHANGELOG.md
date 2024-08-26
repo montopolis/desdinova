@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
+- update README [`4daedee`](https://github.com/montopolis/desdinova/commit/4daedeeb9d6b35413aa382f69ca8fd303d44b54c)
+- update auto-changelog config [`68a8fff`](https://github.com/montopolis/desdinova/commit/68a8fffee27a099a4337a8e4468fd4d03a82334e)
 - Update astro.yml [`176e2db`](https://github.com/montopolis/desdinova/commit/176e2db02b1a6d2e679f234ed083ac3aa2fd20d4)
 - Update astro.yml [`f98d0bc`](https://github.com/montopolis/desdinova/commit/f98d0bcacb17cbe191c04a06b13d807b6201cf84)
 - Create astro.yml [`8cf92af`](https://github.com/montopolis/desdinova/commit/8cf92af62dbc7054881c1d88bfb2edd38faeb18f)

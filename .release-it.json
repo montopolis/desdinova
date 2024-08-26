@@ -1,25 +1,23 @@
 {
-  "plugins": {
-    "@release-it/bumper": {
-      "out": [
-        "src/pages/index.astro"
-      ]
+    "plugins": {
+        "@release-it/bumper": {
+            "out": ["src/pages/index.astro"]
+        }
+    },
+    "git": {
+        "tagName": "v${version}",
+        "requireCleanWorkingDir": false,
+        "requireUpstream": false,
+        "commitMessage": "Release v${version}",
+        "changelog": "npx auto-changelog --hide-credit -t keepachangelog --sort-commits date"
+    },
+    "hooks": {
+        "after:bump": "npx auto-changelog --hide-credit  -t keepachangelog --sort-commits date -p"
+    },
+    "github": {
+        "release": true
+    },
+    "npm": {
+        "publish": false
     }
-  },
-  "git": {
-    "tagName": "v${version}",
-    "requireCleanWorkingDir": false,
-    "requireUpstream": false,
-    "commitMessage": "Release v${version}",
-    "changelog": "npx auto-changelog --hide-credit -t keepachangelog --sort-commits date"
-  },
-  "hooks": {
-    "after:bump": "npx auto-changelog --hide-credit  -t keepachangelog --sort-commits date -p"
-  },
-  "github": {
-    "release": true
-  },
-  "npm": {
-    "publish": false
-  }
 }
