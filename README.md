@@ -7,6 +7,7 @@
 - Opinionated for use with Tailwind CSS, Flowbite, and Cloudflare Pages
 - Minimize external and 3rd-party dependencies
 - Ideally 100s on Lighthouse
+- Help unblock anyone new to Astro and/or Cloudflare Pages
 - F R E E !
 - F A S T !
 
@@ -69,12 +70,13 @@
 ## Adding a new page (aka A Basic Flowbite Workflow)
 
 1. Copy `_starterPage.astro` to a new file
-2. Find a component or block on https://flowbite.com that you want to use
-3. Click "Copy Code" (you do not need the CSS)
-4. Paste inside `<Layout></Layout>`
-5. Customize
-6. Add page to the Top or Bottom Menu, or as a hyperlink somewhere else on the site
-7. Review, Edit, and Repeat until happy
+1. Update `pageTitle` and `pageDescription` in `<Layout pageTitle="_starter" pageDescription="_starter Page">`
+1. Find a component or block on https://flowbite.com that you want to use
+1. Click "Copy Code" (you do not need the CSS)
+1. Paste inside `<Layout></Layout>`
+1. Customize
+1. Review, Edit, and Repeat until happy
+1. Add page to the Top or Bottom Menu, or as a hyperlink somewhere else on the site
 
 ----
 
@@ -152,6 +154,21 @@ https://realfavicongenerator.net/svg-favicon/
 - test site using `npm run preview`
 - if all works, commit and push!
 - I'll do my best to keep Desdinova up to date with upstream updates
+
+## How to port Desdinova updates to your site
+
+- this is tricky 😬
+- if your site is working and building properly, don't worry about it 😅
+
+### Update approaches:
+
+1. (easy) if you have limited your updates to only the `/src/pages` folder you can copy everything else over, re-run
+   `npm install` and validate
+1. (tricky) apply individual updates from Desdinova repo into yours as needed
+1. (reboot option) pull down a new copy of Desdinova and refactor your old site into it (this is probably what I will be
+   doing once a year for my sites)
+1. more than likely I'll just Update Astro (using method included in README), Tailwind and Flowbite, and third party
+   packages as needed
 
 ## Images
 
