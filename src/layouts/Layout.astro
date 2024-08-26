@@ -1,0 +1,19 @@
+---
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import Head from "../components/_core/Head.astro"
+import Foot from "../components/_core/Foot.astro"
+import {SITE_BACKGROUND_COLOR} from "../../astro.config.mjs"
+
+const {pageTitle, pageDescription} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+    <Head pageTitle={pageTitle} pageDescription={pageDescription} />
+    <body class={SITE_BACKGROUND_COLOR}>
+        <Header />
+        <slot />
+        <Footer />
+    </body><Foot />
+</html>

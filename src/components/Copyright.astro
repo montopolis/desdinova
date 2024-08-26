@@ -1,0 +1,9 @@
+---
+import {SITE_DESCRIPTION} from "../../astro.config.mjs"
+const year = new Date().getFullYear()
+---
+
+<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+    >&copy; 2021-{year}
+    <a href="/" class="hover:underline">{SITE_DESCRIPTION}</a> - All Rights Reserved.</span
+>

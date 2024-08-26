@@ -1,0 +1,18 @@
+---
+import Layout from "./Layout.astro"
+
+const {frontmatter} = Astro.props
+---
+
+<Layout>
+    <article
+        class="format mx-auto max-w-4xl px-4 py-16 lg:format-lg dark:format-invert sm:px-6 lg:px-8 lg:py-20">
+        <h1
+            class="font-heading leading-tighter text-4xl font-bold tracking-tighter md:text-5xl">
+            {frontmatter.title}
+        </h1>
+        <div class="prose prose-lg dark:prose-invert font-serif">
+            <slot />
+        </div>
+    </article>
+</Layout>

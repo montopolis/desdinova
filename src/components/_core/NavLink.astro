@@ -1,0 +1,44 @@
+---
+const pathname = new URL(Astro.request.url).pathname
+// const currentPath = pathname.slice(1) // remove the first "/"
+const url = new URL(Astro.props.href, Astro.url)
+const isExternal = url.host !== Astro.url.host
+import {Icon} from "astro-icon/components"
+import {ACTIVE_LINK, INACTIVE_LINK} from "../../../astro.config.mjs"
+
+// console.log("currentPath=" + currentPath)
+// console.log("pathname=" + pathname)
+// console.log(url)
+
+interface Props {
+    title: string
+    href: string
+    path?: string
+    target?: string
+    icon?: string
+}
+
+const {title, href, path = href, target = "_self", icon = ""} = Astro.props
+---
+
+<a
+    href={href}
+    class={pathname === path ? ACTIVE_LINK : INACTIVE_LINK}
+    aria-current={pathname === path ? "page" : null}
+    rel={isExternal ? "noopener" : null}
+    target={target}>
+    {
+        icon !== "" && (
+            <Icon
+                name={icon}
+                class={
+                    pathname === path
+                        ? "mr-1 inline h-4 w-4 text-white dark:text-white"
+                        : "mr-1 inline h-4 w-4 text-gray-700 dark:text-gray-400"
+                }
+            />
+        )
+    }
+
+    {title}</a
+>

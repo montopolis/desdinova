@@ -1,0 +1,23 @@
+---
+import type {ImageMetadata} from "astro"
+import {Image} from "astro:assets"
+
+interface Props {
+    imagePath?: string
+    altText: string
+}
+
+let {imagePath, altText} = Astro.props
+const images = import.meta.glob<{default: ImageMetadata}>(
+    "/src/assets/images/blog/*.{jpeg,jpg,png,gif}",
+)
+if (imagePath == undefined) {
+    imagePath = "/src/assets/images/blog/blog-post-fallback-image.png"
+}
+if (!images[imagePath])
+    throw new Error(
+        `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+    )
+---
+
+<Image src={images[imagePath]()} alt={altText} loading="eager" />

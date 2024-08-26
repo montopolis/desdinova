@@ -1,0 +1,49 @@
+---
+// import {ViewTransitions} from "astro:transitions"
+
+// Supports weights 100-900
+import "@fontsource-variable/montserrat"
+// Supports weights 100-700
+import "@fontsource-variable/aleo"
+// Supports weights 100-800
+import "@fontsource-variable/jetbrains-mono"
+
+import {AstroSeo} from "@astrolib/seo"
+import {SITE_DESCRIPTION} from "../../../astro.config.mjs"
+import {SITE_TITLE} from "../../../astro.config.mjs"
+import Analytics from "../Analytics.astro"
+const {pageTitle, pageDescription} = Astro.props
+const presentablePageTitle = pageTitle ? " / " + pageTitle : ""
+const presentablePageDescription = pageDescription
+    ? pageDescription
+    : SITE_DESCRIPTION
+---
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <title>{SITE_TITLE}{presentablePageTitle}</title>
+    <AstroSeo description={presentablePageDescription} />
+
+    <Analytics />
+    <!--<ViewTransitions fallback="swap" />-->
+</head>
+
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC (Flash of Unstyled Content)
+    if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+        document.documentElement.classList.add("dark")
+    } else {
+        document.documentElement.classList.remove("dark")
+    }
+</script>

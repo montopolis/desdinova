@@ -1,0 +1,27 @@
+---
+import {Image} from "astro:assets"
+import Logo from "/src/assets/images/logo.png"
+// import LogoSquare from "/src/assets/images/logo-square.png"
+
+import {SITE_DESCRIPTION} from "../../astro.config.mjs"
+---
+
+<a href="/" class="flex items-center">
+    <!--<Image-->
+    <!--    src={LogoSquare}-->
+    <!--    loading="eager"-->
+    <!--    class="mr-3 h-10 w-10"-->
+    <!--    alt={SITE_DESCRIPTION}-->
+    <!--/>-->
+    <!--<span-->
+    <!--    class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"-->
+    <!--    >{SITE_DESCRIPTION}</span-->
+    <!--&gt;-->
+    <Image
+        src={Logo}
+        width="150"
+        loading="eager"
+        class="mr-3 h-10"
+        alt={SITE_DESCRIPTION}
+    />
+</a>

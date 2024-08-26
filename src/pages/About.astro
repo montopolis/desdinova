@@ -1,0 +1,39 @@
+---
+import {Icon} from "astro-icon/components"
+import Layout from "../layouts/Layout.astro"
+import {SITE_BACKGROUND_COLOR} from "../../astro.config.mjs"
+---
+
+<Layout pageTitle="About" pageDescription="About Us">
+    <section class={SITE_BACKGROUND_COLOR}>
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
+            <div class="max-w-screen-md">
+                <h2
+                    class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                    Let's find more that brings us together.
+                </h2>
+                <p
+                    class="mb-8 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+                    Flowbite helps you connect with friends, family and
+                    communities of people who share your interests. Connecting
+                    with your friends and family as well as discovering new ones
+                    is easy with features like Groups, Watch and Marketplace.
+                </p>
+                <div
+                    class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                    <a
+                        href="#"
+                        class="inline-flex items-center justify-center rounded-lg bg-primary-700 px-4 py-2.5 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                        Get started
+                    </a>
+                    <a
+                        href="#"
+                        class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-4 py-2.5 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                        <Icon name="tabler:video" class="mr-1" />
+                        View more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
