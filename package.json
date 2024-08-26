@@ -28,6 +28,7 @@
         "@fontsource-variable/aleo": "^5.0.6",
         "@fontsource-variable/jetbrains-mono": "^5.0.22",
         "@fontsource-variable/montserrat": "^5.0.20",
+        "@iconify-json/line-md": "^1.1.40",
         "@playform/compress": "^0.1.1",
         "astro": "^4.14.5",
         "astro-embed": "^0.7.2",
@@ -37,13 +38,13 @@
         "typescript": "^5.5.4"
     },
     "devDependencies": {
-        "@release-it/bumper": "^6.0.1",
-        "@release-it/keep-a-changelog": "^5.0.0",
         "@iconify-json/flowbite": "^1.1.6",
         "@iconify-json/logos": "^1.1.44",
         "@iconify-json/mdi": "^1.1.68",
         "@iconify-json/ph": "^1.1.14",
         "@iconify-json/tabler": "^1.1.120",
+        "@release-it/bumper": "^6.0.1",
+        "@release-it/keep-a-changelog": "^5.0.0",
         "flowbite-typography": "^1.0.3",
         "prettier": "^3.2.5",
         "prettier-plugin-astro": "^0.14.0",
