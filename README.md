@@ -2,11 +2,12 @@
 
 ## Objectives
 
-- Quickly build and deploy a basic small Astro website
-- Opinionated for use with Tailwind CSS, Flowbite, Cloudflare Pages
-- Minimize external and 3rd-party dependencies
 - Provide a modern, clean and simple website starting point for non-designers
+- Quickly build and deploy a basic small Astro website
+- Opinionated for use with Tailwind CSS, Flowbite, and Cloudflare Pages
+- Minimize external and 3rd-party dependencies
 - Ideally 100s on Lighthouse
+- F R E E !
 - F A S T !
 
 ## Features
@@ -38,10 +39,11 @@
 
 - easier color palettes
 
-## First Steps (deployed in 10 minutes!)
+## First Steps (deployed publicly in 10 minutes!)
 
-1. Copy this repo into a folder
+1. Copy this repo into a folder (no other install needed)
 1. Initialize as a git repo on Github or Gitlab (Bitbucket is not supported by Cloudflare Pages)
+2. run `npm install`
 1. Update `astro.config.mjs`
 
 - update SITE_* variables
@@ -51,9 +53,10 @@
 2. Update Favicon
 2. Update Font (if necessary)
 2. Update Colors (if necessary)
-3. Commit all and push to Git
+3. run `npm run dev` to test site locally
+3. When finished commit all and push to Git
 3. Setup Cloudflare Pages
-4. fin!
+4. Fin!
 
 ## Second Steps
 
@@ -87,7 +90,7 @@
 8. Click "Begin Setup"
 9. Leave all defaults EXCEPT change "Framework Preset" to "Astro"
 10. Click "Save and Deploy"
-11. fin!
+11. Fin!
 
 ## Setup Cloudflare Pages for your Domain
 
@@ -101,9 +104,9 @@
 7. Click "Continue"
 8. Click "Activate Domain" if everything is correct
 9. Wait 5-60 minutes for Cloudflare do its DNS & SSL magic
-10. fin!
+10. Fin!
 11. NOTE: If you want to support non-www and www access to the same domain it might be best to setup a custom Cloudflare
-    Redirect Rule
+    Redirect Rule (https://community.cloudflare.com/t/redirect-the-www-to-non-www/558655)
 
 ## Update Logo
 
@@ -139,6 +142,17 @@ https://realfavicongenerator.net/svg-favicon/
 
 - ...
 
+## Updating Astro
+
+- Stash any pending git updates so you have a clean slate
+- run `npx @astrojs/upgrade` to upgrade astro 1st party packages
+- be aware of breaking changes or live dangerously and try it anyway!
+- you can now optionally run `npm run update` to update non-astro packages
+- run `npm run astro check` to make sure no errors
+- test site using `npm run preview`
+- if all works, commit and push!
+- I'll do my best to keep Desdinova up to date with upstream updates
+
 ## Images
 
 - images put in `src/assets/images` will be optimized by Astro if they are imported
@@ -173,15 +187,58 @@ This allows you to conditionally include scripts or HTML as needed per Environme
 
 ```
 
+-----
+
 ## Links to dependencies
 
-- Privacy Policy https://github.com/ArthurGareginyan/privacy-policy-template
-- Playform Compress https://github.com/PlayForm/Compress
-- Fontsource https://fontsource.org/docs/getting-started/introduction
-- Flowbite https://flowbite.com/blocks/
-- Flowbite Typography https://flowbite.com/docs/components/typography/
-- Iconify https://icon-sets.iconify.design/
+- Astro https://docs.astro.build
 - Astro SEO https://github.com/onwidget/astrolib/tree/main/packages/seo
 - Astro Sitemap https://docs.astro.build/en/guides/integrations-guide/sitemap/
 - Astro Icon https://github.com/natemoo-re/astro-icon#readme
 - Astro Embed - https://astro-embed.netlify.app/getting-started/
+- Playform Compress https://github.com/PlayForm/Compress
+- Fontsource https://fontsource.org/docs/getting-started/introduction
+- Tailwind https://tailwindcss.com
+- Flowbite https://flowbite.com/blocks/
+- Flowbite Typography https://flowbite.com/docs/components/typography/
+- Iconify https://icon-sets.iconify.design/
+- Privacy Policy https://github.com/ArthurGareginyan/privacy-policy-template
+
+-----
+
+## Desdinova?!?
+
+https://en.wikipedia.org/wiki/Astronomy_(song)
+
+One of my all-time favorite Blue Öyster Cult songs!
+
+When I was in middle school the original studio and live versions were in constant rotation either on vinyl or cassette
+tape. I was lucky to see them many times in high school.
+
+I was 17 when the 1988 version dropped on the album Imaginos, which is a SPECTACULAR redo of the song, along with the
+entire album. Imaginos is still in rotation for me.
+
+```text
+Call me Desdinova
+Eternal light
+These gravely digs of mine
+Will surely prove a sight
+```
+
+-----
+
+## HUGE THANKS TO
+
+1. The **Astro** team for their **AMAZING** work
+2. The **Tailwind** team for their **AMAZING** work
+3. The **Flowbite** team for their **AMAZING** work
+4. The **Iconify** team for their **AMAZING** work
+4. The **Cloudflare Pages** team for their **AMAZING** work
+
+If you found this repo helpful for your Astro journey please give it a STAR!
+
+I hope you are happy, healthy and secure 🤗
+
+Maintain,
+
+Babul
