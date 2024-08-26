@@ -13,7 +13,7 @@ export const SITE_BACKGROUND_COLOR = "bg-white dark:bg-gray-800"
 export const ACTIVE_LINK =
     "flex items-center justify-center py-2 pr-4 pl-3 text-white rounded lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
 export const INACTIVE_LINK =
-    "flex items-center justify-center py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+    "flex items-center justify-center py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
 
 // https://astro.build/config
 export default defineConfig({
