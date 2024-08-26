@@ -23,6 +23,7 @@ const presentablePageDescription = pageDescription
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
+    <!--sitemap will be automatically built by @astrojs/sitemap, the following line is required-->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -32,6 +33,8 @@ const presentablePageDescription = pageDescription
     <AstroSeo description={presentablePageDescription} />
 
     <Analytics />
+
+    <!--Mobile menu does not work when ViewTransitions are enabled--->
     <!--<ViewTransitions fallback="swap" />-->
 </head>
 

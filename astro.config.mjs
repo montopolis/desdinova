@@ -40,18 +40,3 @@ export default defineConfig({
         icon(),
     ],
 })
-
-export const SocialLinks = {
-    socials: [
-        {ariaLabel: "Instagram", icon: "tabler:brand-instagram", href: "#"},
-        {ariaLabel: "Threads", icon: "tabler:brand-threads", href: "#"},
-        {ariaLabel: "X", icon: "tabler:brand-x", href: "#"},
-        {ariaLabel: "Facebook", icon: "tabler:brand-facebook", href: "#"},
-        {
-            ariaLabel: "YouTube",
-            icon: "tabler:brand-youtube",
-            href: "#",
-        },
-        {ariaLabel: "Discord", icon: "tabler:brand-discord", href: "#"},
-    ],
-}

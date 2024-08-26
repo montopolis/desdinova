@@ -5,31 +5,32 @@
 - Quickly build and deploy a basic small Astro website
 - Opinionated for use with Tailwind CSS, Flowbite, Cloudflare Pages
 - Minimize external and 3rd-party dependencies
+- Provide a modern, clean and simple website starting point for non-designers
+- Ideally 100s on Lighthouse
 - F A S T !
 
 ## Features
 
-- light & dark mode support
+- automatic light & dark mode support
 - responsive
 - automatic robots.txt and sitemap.xml generation
-- includes free Flowbite blocks (its worth paying )
-- astro view transitions enabled
-- video embed capability
+- seo
+- basic blog
+- includes some free Flowbite blocks setup & optimized (its absolutely worth paying for to get access to ALL blocks!)
+- video embed capability (YouTube and Vimeo, Twitter/X is also supported by does that still work?)
 - embed icons from Iconify
 
-## Left To Do
+## To Do
 
-~~- page title support~~
-~~- Blog posts and post~~
-~~- privacy policy~~
-~~- announcement banner~~
-~~- social media links~~
-~~- add staging area support~~
-~~- blog post show category~~
-
+- ~~page title support~~
+- ~~Blog posts and post~~
+- ~~privacy policy~~
+- ~~announcement banner~~
+- ~~social media links~~
+- ~~add staging area support~~
+- ~~blog post show category~~
 - related blog posts
 - paginate blog posts
-
 - blog post tags
 - blog post reading time
 
@@ -37,17 +38,77 @@
 
 - easier color palettes
 
-## First Steps
+## First Steps (deployed in 10 minutes!)
 
+1. Copy this repo into a folder
+1. Initialize as a git repo on Github or Gitlab (Bitbucket is not supported by Cloudflare Pages)
 1. Update `astro.config.mjs`
 
-- update SITE_TITLE
-- update SITE_DESCRIPTION
+- update SITE_* variables
 - update `site:`
 
+2. Update Logo
 2. Update Favicon
-3. Update Font
-4. Update Colors
+2. Update Font (if necessary)
+2. Update Colors (if necessary)
+3. Commit all and push to Git
+3. Setup Cloudflare Pages
+4. fin!
+
+## Second Steps
+
+1. Customize Top Menu in `TopMenu.astro`
+2. Customize Bottom Menu in `BottomMenu.astro`
+3. Add any needed scripts to `Analytics.astro`
+4. Update `index.astro` - this is your home page
+5. Ideally `/src/components/_core` will remain untouched to make future updates easier
+
+## Adding a new page (aka A Basic Flowbite Workflow)
+
+1. Copy `_starterPage.astro` to a new file
+2. Find a component or block on https://flowbite.com that you want to use
+3. Click "Copy Code" (you do not need the CSS)
+4. Paste inside `<Layout></Layout>`
+5. Customize
+6. Add page to the Top or Bottom Menu, or as a hyperlink somewhere else on the site
+7. Review, Edit, and Repeat until happy
+
+----
+
+## Setup Cloudflare Pages for testing
+
+1. Sign in/Sign up at https://dash.cloudflare.com
+2. Go to Workers & Pages
+3. Click "Create"
+4. Go to Pages tab
+5. Click "Connect to Git"
+6. Connect your Git
+7. Select your repo
+8. Click "Begin Setup"
+9. Leave all defaults EXCEPT change "Framework Preset" to "Astro"
+10. Click "Save and Deploy"
+11. fin!
+
+## Setup Cloudflare Pages for your Domain
+
+1. Your DNS needs to be on Cloudflare for this to work?
+2. Go to Workers & PagesYou need to have done "Setup Cloudflare Pages for testing" and everything working
+2. Go to Workers & Pages
+3. Click on your Site
+4. Click on "Custom Domains" tab
+5. Click "Setup a custom domain"
+6. Type in the name of your website (ex. www.mywebsite.com or mywebsite.com)
+7. Click "Continue"
+8. Click "Activate Domain" if everything is correct
+9. Wait 5-60 minutes for Cloudflare do its DNS & SSL magic
+10. fin!
+11. NOTE: If you want to support non-www and www access to the same domain it might be best to setup a custom Cloudflare
+    Redirect Rule
+
+## Update Logo
+
+- replace `/src/images/logo-square.png` with your square logo
+- replace `/src/images/logo.png` with your logo
 
 ## Update Favicon
 
@@ -76,27 +137,47 @@ https://realfavicongenerator.net/svg-favicon/
 
 ## Update Colors
 
-`tailwind.config.mjs`
+- ...
 
 ## Images
 
-- images put in `src/assets/images` will be automatically optimized by Astro
+- images put in `src/assets/images` will be optimized by Astro if they are imported
+- https://docs.astro.build/en/guides/images/#where-to-store-images
+- otherwise put images in `/public`
 
 ## Scripts (ex. Analytics, etc.)
 
-- put any scripts you need in `Head.astro` or `Foot.astro`
+- put any scripts you need in `Analytics.astro`
 
 ## STAGING/PRODUCTION environments support
 
-If you create a `BUILD_MODE` env variable on Cloudflare Pages you can conditionally render code/scripts as required.
+If you create a `BUILD_MODE` .ENV variable on Cloudflare Pages or locally you can conditionally render code/scripts as
+required.
 
-Example: I don't want to enable analytics scripts in STAGING but I do want them for PRODUCTION.
+This allows you to conditionally include scripts or HTML as needed per Environment.
+
+```javascript
+{
+    import.meta.env.BUILD_MODE === "production" && (
+        <script>// add scripts here for production only</script>
+    )
+}
+```
+
+```javascript
+{
+    import.meta.env.BUILD_MODE === "production" && (
+        <b>Or put HTML code which only renders for production</b>
+    )
+}
+
+```
 
 ## Links to dependencies
 
 - Privacy Policy https://github.com/ArthurGareginyan/privacy-policy-template
 - Playform Compress https://github.com/PlayForm/Compress
-- Fontsource https://fontsource.org/
+- Fontsource https://fontsource.org/docs/getting-started/introduction
 - Flowbite https://flowbite.com/blocks/
 - Flowbite Typography https://flowbite.com/docs/components/typography/
 - Iconify https://icon-sets.iconify.design/
