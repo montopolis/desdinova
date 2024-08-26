@@ -2,7 +2,8 @@
 
 #### A quick & easy Astro starter website for use with Tailwind, Flowbite and Cloudflare Pages for non-designers
 
-![screenshot](./screenshot.png)
+![screenshot](./screenshot-dark.png)
+![screenshot](./screenshot-light.png)
 
 ## Objectives
 
@@ -269,7 +270,7 @@ This allows specific scripts or HTML to be included as needed per environment.
 
 ---
 
-## Desdinova
+## Desdinova (🗣️ des-de-nova)
 
 Inspired by one of my favorite Blue Öyster Cult songs!
 
