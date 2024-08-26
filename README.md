@@ -237,6 +237,8 @@ Will surely prove a sight
 
 If you found this repo helpful for your Astro journey please give it a STAR!
 
+Pull requests welcomed!
+
 I hope you are happy, healthy and secure 🤗
 
 Maintain,
