@@ -9,7 +9,7 @@
         "preview": "astro preview",
         "astro": "astro",
         "prettier": "npx prettier --write --list-different .",
-        "release": "release-it",
+        "release": "npx release-it",
         "changelog": "npx auto-changelog --hide-credit -t keepachangelog --sort-commits date-desc"
     },
     "auto-changelog": {
@@ -43,13 +43,10 @@
         "@iconify-json/mdi": "^1.1.68",
         "@iconify-json/ph": "^1.1.14",
         "@iconify-json/tabler": "^1.1.120",
-        "@release-it/bumper": "^6.0.1",
-        "@release-it/keep-a-changelog": "^5.0.0",
         "flowbite-typography": "^1.0.3",
         "prettier": "^3.2.5",
         "prettier-plugin-astro": "^0.14.0",
-        "prettier-plugin-tailwindcss": "^0.6.6",
-        "release-it": "^17.6.0"
+        "prettier-plugin-tailwindcss": "^0.6.6"
     },
     "optionalDependencies": {
         "@rollup/rollup-linux-x64-gnu": "4.9.5"
