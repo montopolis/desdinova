@@ -1,16 +1,22 @@
 ---
 import {Image} from "astro:assets"
 import Logo from "/src/assets/images/logo.png"
-// import LogoSquare from "/src/assets/images/logo-square.png"
+import LogoSquare from "/src/assets/images/logo-square.png"
 
 import {SITE_DESCRIPTION} from "../../astro.config.mjs"
+
+interface Props {
+    loading?: string
+}
+
+const {loading = "lazy"} = Astro.props
 ---
 
 <a href="/" class="flex items-center">
     <!--Square Logo with Text Site Title-->
     <!--<Image-->
     <!--    src={LogoSquare}-->
-    <!--    loading="eager"-->
+    <!--    loading={loading}-->
     <!--    class="mr-3 h-10 w-10"-->
     <!--    alt={SITE_DESCRIPTION}-->
     <!--/>-->
@@ -23,7 +29,7 @@ import {SITE_DESCRIPTION} from "../../astro.config.mjs"
     <Image
         src={Logo}
         width="150"
-        loading="eager"
+        loading={loading}
         class="mr-3"
         alt={SITE_DESCRIPTION}
     />
