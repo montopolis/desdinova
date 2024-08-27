@@ -1,7 +1,7 @@
 {
     "name": "desdinova",
     "type": "module",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",
@@ -9,7 +9,7 @@
         "preview": "astro preview",
         "astro": "astro",
         "prettier": "npx prettier --write --list-different .",
-        "release": "npx release-it",
+        "release": "npm run prettier && npx release-it",
         "changelog": "npx auto-changelog --hide-credit -t keepachangelog --sort-commits date-desc"
     },
     "auto-changelog": {
