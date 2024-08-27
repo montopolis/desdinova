@@ -7,47 +7,49 @@
 
 ## Objectives
 
-- Create a modern, clean, and simple website starter for non-designers
-- Enable rapid building and deployment of a basic Astro website
-- Pre-configured for Tailwind CSS, Flowbite, and Cloudflare Pages
-- Minimize reliance on external and third-party dependencies
-- Aim for a perfect Lighthouse score
-- Assist beginners with Astro and Cloudflare Pages
-- Completely F R E E!
-- Blazingly F A S T!
+-   Create a modern, clean, and simple website starter for non-designers
+-   Enable rapid building and deployment of a basic Astro website
+-   Pre-configured for Tailwind CSS, Flowbite, and Cloudflare Pages
+-   Minimize reliance on external and third-party dependencies
+-   Aim for a perfect Lighthouse score
+-   Assist beginners with Astro and Cloudflare Pages
+-   Completely F R E E!
+-   Blazingly F A S T!
 
 ## Features
 
-- Automatic support for both light and dark modes
-- Fully responsive design
-- Automatic generation of `robots.txt` and `sitemap.xml`
-- SEO optimization
-- Basic blog functionality
-- Includes some free Flowbite blocks pre-configured and optimized (consider paying for access to all blocks)
-- Video embedding (YouTube, Vimeo, and Twitter/X – if still supported)
-- Icon integration via Iconify
+-   Automatic support for both light and dark modes
+-   Fully responsive design
+-   Automatic generation of `robots.txt` and `sitemap.xml`
+-   SEO optimization
+-   Basic blog functionality
+-   Includes some free Flowbite blocks pre-configured and optimized (consider paying for access to all blocks)
+-   Video embedding (YouTube, Vimeo, and Twitter/X – if still supported)
+-   Icon integration via Iconify
 
 ## To-Do List
 
-- ~~Page title support~~
-- ~~Blog posts and post~~
-- ~~Privacy policy~~
-- ~~Announcement banner~~
-- ~~Social media links~~
-- ~~Staging area support~~
-- ~~Blog post category display~~
-- Related blog posts
-- Pagination for blog posts
-- Blog post tags
-- Blog post reading time
+-   ~~Page title support~~
+-   ~~Blog posts and post~~
+-   ~~Privacy policy~~
+-   ~~Announcement banner~~
+-   ~~Social media links~~
+-   ~~Staging area support~~
+-   ~~Blog post category display~~
+-   Related blog posts
+-   Pagination for blog posts
+-   Blog post tags
+-   Blog post reading time
 
 ## Future Ideas
 
-- Easier color palette customization
+-   Easier color palette customization
 
 ---
 
 ## Getting Started (Get Up & Running in 10 Minutes!)
+
+### get environment setup
 
 1. `mkdir astro-desdinova` (or your preferred project name)
 2. `cd astro-desdinova`
@@ -55,21 +57,25 @@
 4. Run `npm install` to install packages
 5. Run `npm run dev` to start development
 
-- Open the site with the provided URL to verify it's working
+-   Open the site with the provided URL to verify it's working
 
-6. Update `astro.config.mjs`
+### do basic configuration
 
-- Set the `SITE_*` variables
-- Update the `site` field
+1. Update `astro.config.mjs`
 
-7. Update the Logo [see below](#update-logo)
-8. Update the Favicon [see below](#update-favicon)
-9. Update the Font (if necessary [see below](#update-font))
-10. Adjust Colors (if necessary [see below](#update-colors))
+-   Set the `SITE_*` variables
+-   Update the `site` field
 
-11. Commit all changes and push to Git
-12. Set up Cloudflare Pages for testing [see below](#cloudflare-pages-testing)
-13. Done!
+2. Update the Logo [see below](#updating-the-logo)
+3. Update the Favicon [see below](#updating-the-favicon)
+4. Update the Font (if necessary [see below](#updating-the-font))
+5. Adjust Colors (if necessary [see below](#updating-colors))
+
+### git & deploy
+
+1. Commit all changes and push to Git
+2. Set up Cloudflare Pages for testing [see below](#setting-up-cloudflare-pages-for-testing)
+3. Done!
 
 ## Next Steps
 
@@ -93,8 +99,6 @@
 
 ---
 
-<a id="#cloudflare-pages-testing"></a>
-
 ## Setting Up Cloudflare Pages for Testing
 
 1. Sign in or sign up at [Cloudflare Dashboard](https://dash.cloudflare.com)
@@ -108,8 +112,6 @@
 9. Set "Framework Preset" to "Astro"
 10. Click "Save and Deploy"
 11. Done!
-
-<a id="#cloudflare-pages-domain"></a>
 
 ## Setting Up Cloudflare Pages for Your Domain
 
@@ -129,15 +131,11 @@
 
 ---
 
-<a id="update-logo"></a>
-
 ## Updating the Logo
 
-- Replace `/src/images/logo-square.png` with your square logo
-- Replace `/src/images/logo.png` with your primary logo
-- For further customization, edit `/src/components/SiteLogo.astro`
-
-<a id="update-favicon"></a>
+-   Replace `/src/images/logo-square.png` with your square logo
+-   Replace `/src/images/logo.png` with your primary logo
+-   For further customization, edit `/src/components/SiteLogo.astro`
 
 ## Updating the Favicon
 
@@ -145,52 +143,46 @@
 
 Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
-- Update `favicon.svg` and `favicon.png` in the `/public` folder
-- Note: Favicon settings are in `/src/components/_core/Head.astro`
-
-<a id="update-font"></a>
+-   Update `favicon.svg` and `favicon.png` in the `/public` folder
+-   Note: Favicon settings are in `/src/components/_core/Head.astro`
 
 ## Updating the Font
 
 ### Method #1: Bundled via Fontsource
 
-- Add the font to `package.json` from [Fontsource](https://fontsource.org)
-- Import the font in `/src/components/_core/Head.astro`
+-   Add the font to `package.json` from [Fontsource](https://fontsource.org)
+-   Import the font in `/src/components/_core/Head.astro`
 
 ### Method #2: Google Fonts (Enable Cloudflare Fonts recommended)
 
-- Include the font in `/src/components/_core/Head.astro`
+-   Include the font in `/src/components/_core/Head.astro`
 
 ### Updating All Methods
 
-- Update the CSS styles at the bottom of `/src/Layout/Layout.astro`
-- Modify the font settings in `tailwind.config.mjs`
-
-<a id="update-colors"></a>
+-   Update the CSS styles at the bottom of `/src/Layout/Layout.astro`
+-   Modify the font settings in `tailwind.config.mjs`
 
 ## Updating Colors
 
-- ...
+-   ...
 
 ---
 
-<a id="#update-astro"></a>
-
 ## Updating Astro
 
-- Stash any pending git updates to start with a clean slate
-- Run `npx @astrojs/upgrade` to upgrade Astro's first-party packages
-- Be mindful of potential breaking changes or proceed at your own risk
-- Optionally, run `npm run update` to update non-Astro packages
-- Ensure there are no errors with `npm run astro check`
-- Test the site using `npm run preview`
-- If everything is functional, commit and push the changes
-- Desdinova will be kept up-to-date with upstream updates as best as possible
+-   Stash any pending git updates to start with a clean slate
+-   Run `npx @astrojs/upgrade` to upgrade Astro's first-party packages
+-   Be mindful of potential breaking changes or proceed at your own risk
+-   Optionally, run `npm run update` to update non-Astro packages
+-   Ensure there are no errors with `npm run astro check`
+-   Test the site using `npm run preview`
+-   If everything is functional, commit and push the changes
+-   Desdinova will be kept up-to-date with upstream updates as best as possible
 
 ## Porting Desdinova Updates to Your Site
 
-- This can be complex 😬
-- If your site is functional and building correctly, it's often best to leave it as is 😅
+-   This can be complex 😬
+-   If your site is functional and building correctly, it's often best to leave it as is 😅
 
 ### Update Approaches
 
@@ -200,24 +192,24 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 3. **Full Reboot:** Set up a new Desdinova instance and refactor your existing site into it (this is my annual practice
    for my sites)
 4. **Most Likely:** I'll update Astro, Tailwind, Flowbite, and third-party packages as necessary
-   using [this approach](#update-astro)
+   using [this approach](#updating-astro)
 
 ---
 
 ## Image Handling
 
-- Images placed in `/src/assets/images` will be optimized by Astro if imported
-- Refer to [Astro Image Guide](https://docs.astro.build/en/guides/images/#where-to-store-images)
-- Alternatively, store images in the `/public` directory
+-   Images placed in `/src/assets/images` will be optimized by Astro if imported
+-   Refer to [Astro Image Guide](https://docs.astro.build/en/guides/images/#where-to-store-images)
+-   Alternatively, store images in the `/public` directory
 
 ## Announcement Banner
 
-- Customize the banner in `/src/components/Announcement.astro`
-- To disable the banner, comment out `<Announcement />` in `/src/pages/index.astro`
+-   Customize the banner in `/src/components/Announcement.astro`
+-   To disable the banner, comment out `<Announcement />` in `/src/pages/index.astro`
 
 ## Scripts (e.g., Analytics)
 
-- Place required scripts in `/src/components/Analytics.astro`
+-   Place required scripts in `/src/components/Analytics.astro`
 
 ## Environment Support (Local/Staging/Production)
 
@@ -255,18 +247,18 @@ This allows specific scripts or HTML to be included as needed per environment.
 
 ## Links to Dependencies
 
-- [Astro](https://docs.astro.build)
-- [Astro SEO](https://github.com/onwidget/astrolib/tree/main/packages/seo)
-- [Astro Sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
-- [Astro Icon](https://github.com/natemoo-re/astro-icon#readme)
-- [Astro Embed](https://astro-embed.netlify.app/getting-started/)
-- [Playform Compress](https://github.com/PlayForm/Compress)
-- [Fontsource](https://fontsource.org/docs/getting-started/introduction)
-- [Tailwind](https://tailwindcss.com)
-- [Flowbite](https://flowbite.com/blocks/)
-- [Flowbite Typography](https://flowbite.com/docs/components/typography/)
-- [Iconify](https://icon-sets.iconify.design/)
-- [Privacy Policy Template](https://github.com/ArthurGareginyan/privacy-policy-template)
+-   [Astro](https://docs.astro.build)
+-   [Astro SEO](https://github.com/onwidget/astrolib/tree/main/packages/seo)
+-   [Astro Sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
+-   [Astro Icon](https://github.com/natemoo-re/astro-icon#readme)
+-   [Astro Embed](https://astro-embed.netlify.app/getting-started/)
+-   [Playform Compress](https://github.com/PlayForm/Compress)
+-   [Fontsource](https://fontsource.org/docs/getting-started/introduction)
+-   [Tailwind](https://tailwindcss.com)
+-   [Flowbite](https://flowbite.com/blocks/)
+-   [Flowbite Typography](https://flowbite.com/docs/components/typography/)
+-   [Iconify](https://icon-sets.iconify.design/)
+-   [Privacy Policy Template](https://github.com/ArthurGareginyan/privacy-policy-template)
 
 ---
 
