@@ -11,9 +11,24 @@ const {pageTitle, pageDescription} = Astro.props
 <!doctype html>
 <html lang="en">
     <Head pageTitle={pageTitle} pageDescription={pageDescription} />
+
+    <script>
+        import "flowbite"
+    </script>
+
     <body class={SITE_BACKGROUND_COLOR}>
         <Header />
         <slot />
         <Footer />
     </body><Foot />
+
+    <script>
+        document.addEventListener("astro:after-swap", () => {
+            // Importing the Flowbite library
+            import("flowbite").then(flowbite => {
+                // Initiating Flowbite
+                flowbite.initFlowbite()
+            })
+        })
+    </script>
 </html>

@@ -1,5 +1,5 @@
 ---
-// import {ViewTransitions} from "astro:transitions"
+import {ViewTransitions} from "astro:transitions"
 
 // Supports weights 100-900
 import "@fontsource-variable/montserrat"
@@ -34,8 +34,7 @@ const presentablePageDescription = pageDescription
 
     <Analytics />
 
-    <!--Mobile menu does not work when ViewTransitions are enabled--->
-    <!--<ViewTransitions fallback="swap" />-->
+    <ViewTransitions fallback="swap" />
 </head>
 
 <script>
