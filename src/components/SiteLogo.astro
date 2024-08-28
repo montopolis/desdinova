@@ -1,37 +1,40 @@
 ---
-import {Image} from "astro:assets"
-import Logo from "/src/assets/images/logo.png"
+import {Picture} from "astro:assets"
+// import Logo from "/src/assets/images/logo.png"
 import siteData from "../config/siteData"
-// import LogoSquare from "/src/assets/images/logo-square.png"
+import LogoSquare from "/src/assets/images/logo-square.png"
 
 interface Props {
     loading?: "eager" | "lazy" | null
+    alt?: string
 }
 
-const {loading = "lazy"} = Astro.props
+const {loading = "lazy", alt = siteData.name} = Astro.props
 ---
 
-<a href="/" class="flex items-center">
+<a href={siteData.url} class="flex items-center">
     <!--Square Logo with Text Site Title-->
-    <!--<Image-->
-    <!--    src={LogoSquare}-->
-    <!--    loading={loading}-->
-    <!--    class="mr-3 h-8 sm:h-12"-->
-    <!--    height="64"-->
-    <!--    width="64"-->
-    <!--    alt={siteData.description}-->
-    <!--/>-->
-    <!--<span-->
-    <!--    class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"-->
-    <!--    >{siteData.description}</span-->
-    <!--&gt;-->
-
-    <!--Full Logo-->
-    <Image
-        src={Logo}
-        width="175"
+    <Picture
+        src={LogoSquare}
+        densities={[1.5, 2]}
         loading={loading}
         class="mr-3"
-        alt={siteData.description}
+        height="64"
+        width="64"
+        alt={alt}
     />
+    <span
+        class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
+        >{siteData.name}</span
+    >
+
+    <!--Full Logo-->
+    <!--<Picture-->
+    <!--    src={Logo}-->
+    <!--densities={[1.5, 2]}-->
+    <!--    width="175"-->
+    <!--    loading={loading}-->
+    <!--    class="mr-3"-->
+    <!--    alt={siteData.name}-->
+    <!--/>-->
 </a>
