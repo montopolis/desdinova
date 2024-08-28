@@ -11,7 +11,7 @@ import "@fontsource-variable/jetbrains-mono"
 import {AstroSeo} from "@astrolib/seo"
 import Analytics from "../Analytics.astro"
 import siteData from "../../config/siteData"
-const {pageTitle, pageDescription} = Astro.props
+const {pageTitle, pageDescription, canonical} = Astro.props
 const presentablePageTitle = pageTitle ? " / " + pageTitle : ""
 const presentablePageDescription = pageDescription
     ? pageDescription
@@ -29,7 +29,7 @@ const presentablePageDescription = pageDescription
     <link rel="icon" type="image/png" href="/favicon.png" />
 
     <title>{siteData.name}{presentablePageTitle}</title>
-    <AstroSeo description={presentablePageDescription} />
+    <AstroSeo description={presentablePageDescription} canonical={canonical} />
 
     <Analytics />
 
@@ -37,23 +37,31 @@ const presentablePageDescription = pageDescription
 </head>
 
 <script is:inline>
-    const theme = (() => {
-        if (
-            typeof localStorage !== "undefined" &&
-            localStorage.getItem("theme")
-        ) {
-            return localStorage.getItem("theme")
-        }
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            return "dark"
-        }
-        return "light"
-    })()
+    // https://jklakus.co.uk/blogs/astro-darktheme
+    const setTheme = () => {
+        const theme = (() => {
+            if (
+                typeof localStorage !== "undefined" &&
+                localStorage.getItem("theme")
+            ) {
+                return localStorage.getItem("theme")
+            }
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                return "dark"
+            }
+            return "light"
+        })()
 
-    if (theme === "light") {
-        document.documentElement.classList.remove("dark")
-    } else {
-        document.documentElement.classList.add("dark")
+        if (theme === "light") {
+            document.documentElement.classList.remove("dark")
+        } else {
+            document.documentElement.classList.add("dark")
+        }
+
+        window.localStorage.setItem("theme", theme || "light")
     }
-    window.localStorage.setItem("theme", theme)
+
+    setTheme()
+
+    document.addEventListener("astro:after-swap", setTheme)
 </script>
