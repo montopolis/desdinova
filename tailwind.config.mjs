@@ -20,6 +20,7 @@ export default {
         "h-9",
         "leading-9",
         "shadow-lg",
+        {pattern: /(bg-primary|text-primary|border)-./},
     ],
     darkMode: "media",
     theme: {
