@@ -18,6 +18,7 @@ export default defineConfig({
             // applyBaseStyles: false,
         }),
         (await import("@playform/compress")).default({
+            // css already compressed
             CSS: false,
             HTML: {
                 "html-minifier-terser": {
@@ -26,7 +27,7 @@ export default defineConfig({
             },
             Image: false,
             JavaScript: false,
-            SVG: false,
+            SVG: true,
         }),
         sitemap(),
         icon(),
