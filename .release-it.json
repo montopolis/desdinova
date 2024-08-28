@@ -1,7 +1,7 @@
 {
     "plugins": {
         "@release-it/bumper": {
-            "out": ["src/pages/index.astro"]
+            "out": ["src/components/Footer.astro"]
         }
     },
     "git": {
