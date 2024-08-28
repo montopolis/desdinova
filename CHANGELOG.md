@@ -5,7 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.1](https://github.com/montopolis/desdinova/compare/v0.1.0...v0.1.1)
+## [v0.1.2](https://github.com/montopolis/desdinova/compare/v0.1.1...v0.1.2)
+
+### Commits
+
+- set aria-label for Team Members [`494d2a3`](https://github.com/montopolis/desdinova/commit/494d2a3acef9db72dd07d7b0a4a8c1a216868928)
+- fix menu links for light & dark modes [`5385eed`](https://github.com/montopolis/desdinova/commit/5385eed508e1f281b98803012a3d49ee17d9565b)
+- slightly larger social icons in footer [`9e1b0b6`](https://github.com/montopolis/desdinova/commit/9e1b0b6b4decde102759a05a372ff95da6ec475d)
+- switching light & dark modes better supported with view transitions [`8629106`](https://github.com/montopolis/desdinova/commit/862910668bb0f8c3440b869dd0e97559f9c25ffe)
+- refactored to use Image component [`8ea245e`](https://github.com/montopolis/desdinova/commit/8ea245ec80ce91d194ea2fb80d46f5f66b1f281a)
+- clean up & optimizations [`75447e6`](https://github.com/montopolis/desdinova/commit/75447e63742ebd6a0e72cb1a2110c14434f904e2)
+- remove console.log() statements [`58ebe02`](https://github.com/montopolis/desdinova/commit/58ebe024105746f1aa0c988a4b66e7c6996f2251)
+- move version to footer [`bc3c865`](https://github.com/montopolis/desdinova/commit/bc3c865ebe02eb12ba2d49d0507b66eb0e028ffb)
+
+## [v0.1.1](https://github.com/montopolis/desdinova/compare/v0.1.0...v0.1.1) - 2024-08-27
 
 ### Commits
 
@@ -16,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - typo [`76f05e9`](https://github.com/montopolis/desdinova/commit/76f05e94779752d8217bf18d0febbdce8323a85c)
 - increase size of social icons [`7ec99f1`](https://github.com/montopolis/desdinova/commit/7ec99f1d6d49a4ab98e61400a5fd93f3dee86fa4)
 - update README [`00e217b`](https://github.com/montopolis/desdinova/commit/00e217be5cd28d690c25237a9248fcc9fb6b0cc8)
+- Release v0.1.1 [`2c58446`](https://github.com/montopolis/desdinova/commit/2c5844613995eb3eb4b96f083a1ffdfca8a405a2)
 
 ## [v0.1.0](https://github.com/montopolis/desdinova/compare/v0.0.2...v0.1.0) - 2024-08-27
 
