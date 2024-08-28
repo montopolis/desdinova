@@ -2,8 +2,8 @@
 
 #### A quick & easy Astro starter website for use with Tailwind, Flowbite and Cloudflare Pages for non-designers
 
-![screenshot](./screenshot-dark.png)
-![screenshot](./screenshot-light.png)
+![screenshot](./screenshot-dark.webp)
+![screenshot](./screenshot-light.webp)
 
 ## Objectives
 
