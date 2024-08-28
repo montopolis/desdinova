@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro"
 import {SITE_BACKGROUND_COLOR} from "../../site.config.mjs"
 import {Icon} from "astro-icon/components"
 import PhoneImage from "../assets/images/samples/phone-mockup.png"
+import NewsletterSignup from "../components/NewsletterSignup.astro"
 ---
 
 <Layout pageTitle="Company" pageDescription="All about the Company">
@@ -38,4 +39,6 @@ import PhoneImage from "../assets/images/samples/phone-mockup.png"
             </div>
         </div>
     </section>
+
+    <NewsletterSignup />
 </Layout>
