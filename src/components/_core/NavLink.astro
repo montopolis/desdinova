@@ -1,14 +1,10 @@
 ---
+import siteData from "../../config/siteData"
+import {Icon} from "astro-icon/components"
+
 const pathname = new URL(Astro.request.url).pathname
 const url = new URL(Astro.props.href, Astro.url)
 const isExternal = url.host !== Astro.url.host
-
-import {Icon} from "astro-icon/components"
-
-export const ACTIVE_MENU_CLASS =
-    "flex items-center justify-center py-2 pr-4 pl-3 text-black dark:text-white lg:text-primary-700"
-export const INACTIVE_MENU_CLASS =
-    "flex items-center justify-center py-2 pr-4 pl-3 hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent text-gray-400 dark:text-gray-400"
 
 interface Props {
     title: string
@@ -23,7 +19,9 @@ const {title, href, path = href, target = "_self", icon = ""} = Astro.props
 
 <a
     href={href}
-    class={pathname === path ? ACTIVE_MENU_CLASS : INACTIVE_MENU_CLASS}
+    class={pathname === path
+        ? siteData.colors.activeMenuClass
+        : siteData.colors.inactiveMenuClass}
     aria-current={pathname === path ? "page" : null}
     rel={isExternal ? "noopener" : null}
     target={target}>
@@ -33,8 +31,10 @@ const {title, href, path = href, target = "_self", icon = ""} = Astro.props
                 name={icon}
                 class={
                     pathname === path
-                        ? "mr-1 inline h-4 w-4 " + {ACTIVE_MENU_CLASS}
-                        : "mr-1 inline h-4 w-4 " + {INACTIVE_MENU_CLASS}
+                        ? "mr-1 inline h-4 w-4 " +
+                          siteData.colors.activeMenuClass
+                        : "mr-1 inline h-4 w-4 " +
+                          siteData.colors.inactiveMenuClass
                 }
             />
         )

@@ -3,13 +3,12 @@ layout: ../layouts/MarkdownLayout.astro
 title: Privacy Policy
 ---
 
-import SiteTitle from "../components/_core/SiteTitle.astro"
-import SiteURL from "../components/_core/SiteURL.astro"
+import siteData from "../config/siteData.js"
 
 **Last Updated: August 25, 2024**
 
-<b><SiteTitle /></b> ("we", "us", or "our") operates [
-<b><SiteURL /></b>] (the "Site"). This page informs you of our policies regarding the collection,
+<b>{siteData.company}</b> ("we", "us", or "our") operates <b>{siteData.name}</b> [{siteData.url}] (the "Site").
+This page informs you of our policies regarding the collection,
 use, and disclosure of Personal Information we receive from users of the Site.
 
 By using the Site, you agree to the collection and use of information in accordance with this policy.

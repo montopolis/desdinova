@@ -1,11 +1,12 @@
 ---
 // import {Image} from "astro:assets"
 import Layout from "../layouts/Layout.astro"
-import {SITE_BACKGROUND_COLOR} from "../../site.config.mjs"
+import siteData from "../config/siteData"
+
 // import {Icon} from "astro-icon/components"
 // import ImageSample from "../assets/images/samples/phone-mockup.png"
 ---
 
 <Layout pageTitle="_starter" pageDescription="_starter Page">
-    <section class={SITE_BACKGROUND_COLOR}></section>
+    <section class={siteData.colors.mainBackground}></section>
 </Layout>

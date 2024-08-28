@@ -3,8 +3,7 @@ import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import Head from "../components/_core/Head.astro"
 import Foot from "../components/_core/Foot.astro"
-import {SITE_BACKGROUND_COLOR} from "../../site.config.mjs"
-
+import siteData from "../config/siteData"
 const {pageTitle, pageDescription} = Astro.props
 ---
 
@@ -12,7 +11,7 @@ const {pageTitle, pageDescription} = Astro.props
 <html lang="en">
     <Head pageTitle={pageTitle} pageDescription={pageDescription} />
 
-    <body class={SITE_BACKGROUND_COLOR}>
+    <body class={siteData.colors.mainBackground}>
         <Header />
         <slot />
         <Footer />

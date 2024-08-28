@@ -3,13 +3,12 @@ import tailwind from "@astrojs/tailwind"
 import mdx from "@astrojs/mdx"
 import sitemap from "@astrojs/sitemap"
 import icon from "astro-icon"
-import {SITE_URL} from "./site.config.mjs"
+import siteData from "./src/config/siteData"
 
 export const darkMode = "media"
 
-// https://astro.build/config
 export default defineConfig({
-    site: SITE_URL,
+    site: siteData.url,
     trailingSlash: "never",
     integrations: [
         mdx(),

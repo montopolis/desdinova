@@ -1,14 +1,15 @@
 ---
 import {Image} from "astro:assets"
 import Layout from "../layouts/Layout.astro"
-import {SITE_BACKGROUND_COLOR} from "../../site.config.mjs"
+
 import {Icon} from "astro-icon/components"
 import PhoneImage from "../assets/images/samples/phone-mockup.png"
 import NewsletterSignup from "../components/NewsletterSignup.astro"
+import siteData from "../config/siteData"
 ---
 
 <Layout pageTitle="Company" pageDescription="All about the Company">
-    <section class={SITE_BACKGROUND_COLOR}>
+    <section class={siteData.colors.mainBackground}>
         <div
             class="mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
             <div class="mr-auto place-self-center lg:col-span-7">

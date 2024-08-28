@@ -3,7 +3,7 @@ import Socials from "./Socials.astro"
 import SiteLogo from "./SiteLogo.astro"
 import BottomMenu from "./BottomMenu.astro"
 import Copyright from "./Copyright.astro"
-import {SITE_TITLE} from "../../site.config.mjs"
+import siteData from "../config/siteData"
 ---
 
 <footer class="bg-white p-4 md:p-8 lg:p-10 dark:bg-gray-800">
@@ -11,7 +11,9 @@ import {SITE_TITLE} from "../../site.config.mjs"
         <div class="mb-3 flex items-center justify-center">
             <SiteLogo loading="eager" />
         </div>
-        <p class="my-6 text-gray-500 dark:text-gray-400">{SITE_TITLE} v0.1.2</p>
+        <p class="my-6 text-gray-500 dark:text-gray-400">
+            {siteData.name} v0.1.2
+        </p>
         <BottomMenu />
         <hr
             class="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700"

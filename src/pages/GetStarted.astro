@@ -3,14 +3,15 @@ import {Icon} from "astro-icon/components"
 import {Image} from "astro:assets"
 import {YouTube} from "astro-embed"
 import Layout from "../layouts/Layout.astro"
-import {SITE_BACKGROUND_COLOR} from "../../site.config.mjs"
+
 import OfficeImage1 from "../assets/images/samples/office-long-1.png"
 import OfficeImage2 from "../assets/images/samples/office-long-2.png"
 import HeroImage3 from "../assets/images/blog/blog-post-heroimage3.png"
+import siteData from "../config/siteData"
 ---
 
 <Layout pageTitle="Get Started" pageDescription="Getting Started">
-    <section class={SITE_BACKGROUND_COLOR}>
+    <section class={siteData.colors.mainBackground}>
         <div
             class="mx-auto max-w-screen-xl items-center gap-16 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
             <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">

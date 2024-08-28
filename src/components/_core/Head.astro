@@ -9,14 +9,13 @@ import "@fontsource-variable/aleo"
 import "@fontsource-variable/jetbrains-mono"
 
 import {AstroSeo} from "@astrolib/seo"
-import {SITE_DESCRIPTION} from "../../../site.config.mjs"
-import {SITE_TITLE} from "../../../site.config.mjs"
 import Analytics from "../Analytics.astro"
+import siteData from "../../config/siteData"
 const {pageTitle, pageDescription} = Astro.props
 const presentablePageTitle = pageTitle ? " / " + pageTitle : ""
 const presentablePageDescription = pageDescription
     ? pageDescription
-    : SITE_DESCRIPTION
+    : siteData.description
 ---
 
 <head>
@@ -29,7 +28,7 @@ const presentablePageDescription = pageDescription
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon.png" />
 
-    <title>{SITE_TITLE}{presentablePageTitle}</title>
+    <title>{siteData.name}{presentablePageTitle}</title>
     <AstroSeo description={presentablePageDescription} />
 
     <Analytics />

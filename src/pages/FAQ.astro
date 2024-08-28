@@ -1,11 +1,11 @@
 ---
 import {Icon} from "astro-icon/components"
 import Layout from "../layouts/Layout.astro"
-import {SITE_BACKGROUND_COLOR} from "../../site.config.mjs"
+import siteData from "../config/siteData"
 ---
 
 <Layout pageTitle="FAQ" pageDescription="Frequently Asked Questions">
-    <section class={SITE_BACKGROUND_COLOR}>
+    <section class={siteData.colors.mainBackground}>
         <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
             <h2
                 class="mb-8 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">

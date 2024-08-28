@@ -1,9 +1,8 @@
 ---
 import {Image} from "astro:assets"
 import Logo from "/src/assets/images/logo.png"
+import siteData from "../config/siteData"
 // import LogoSquare from "/src/assets/images/logo-square.png"
-
-import {SITE_DESCRIPTION} from "../../site.config.mjs"
 
 interface Props {
     loading?: "eager" | "lazy" | null
@@ -18,11 +17,11 @@ const {loading = "lazy"} = Astro.props
     <!--    src={LogoSquare}-->
     <!--    loading={loading}-->
     <!--    class="mr-3 h-10 w-10"-->
-    <!--    alt={SITE_DESCRIPTION}-->
+    <!--    alt={siteData.description}-->
     <!--/>-->
     <!--<span-->
     <!--    class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"-->
-    <!--    >{SITE_DESCRIPTION}</span-->
+    <!--    >{siteData.description}</span-->
     <!--&gt;-->
 
     <!--Full Logo-->
@@ -31,6 +30,6 @@ const {loading = "lazy"} = Astro.props
         width="150"
         loading={loading}
         class="mr-3"
-        alt={SITE_DESCRIPTION}
+        alt={siteData.description}
     />
 </a>
