@@ -4,7 +4,6 @@ import {Icon} from "astro-icon/components"
 
 const pathname = new URL(Astro.request.url).pathname
 const url = new URL(Astro.props.href, Astro.url)
-const isExternal = url.host !== Astro.url.host
 
 interface Props {
     title: string
@@ -15,14 +14,17 @@ interface Props {
 }
 
 const {title, href, path = href, target = "_self", icon = ""} = Astro.props
+
+const isExternal = url.host !== Astro.url.host
+const isActive: boolean = pathname === path
 ---
 
 <a
     href={href}
-    class={pathname === path
+    class={isActive
         ? siteData.colors.activeMenuClass
         : siteData.colors.inactiveMenuClass}
-    aria-current={pathname === path ? "page" : null}
+    aria-current={isActive ? "page" : null}
     rel={isExternal ? "noopener" : null}
     target={target}>
     {
@@ -30,11 +32,9 @@ const {title, href, path = href, target = "_self", icon = ""} = Astro.props
             <Icon
                 name={icon}
                 class={
-                    pathname === path
-                        ? "mr-1 inline h-4 w-4 " +
-                          siteData.colors.activeMenuClass
-                        : "mr-1 inline h-4 w-4 " +
-                          siteData.colors.inactiveMenuClass
+                    isActive
+                        ? siteData.colors.activeMenuIconClass
+                        : siteData.colors.inactiveMenuIconClass
                 }
             />
         )
