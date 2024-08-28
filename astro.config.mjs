@@ -10,6 +10,7 @@ export const darkMode = "media"
 // https://astro.build/config
 export default defineConfig({
     site: SITE_URL,
+    trailingSlash: "never",
     integrations: [
         mdx(),
         tailwind({
