@@ -5,7 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.2](https://github.com/montopolis/desdinova/compare/v0.1.1...v0.1.2)
+## [v0.2.0](https://github.com/montopolis/desdinova/compare/v0.1.2...v0.2.0)
+
+### Commits
+
+- improve contrast ratio [`ab37b7a`](https://github.com/montopolis/desdinova/commit/ab37b7a2af22b5181da167a2d92f4ccc88de95d9)
+- remove unused reference [`c49d8bb`](https://github.com/montopolis/desdinova/commit/c49d8bbd93219e4b0e8a9eef4d575eb347de2163)
+- optimize SVGs other than icons [`1b4d40e`](https://github.com/montopolis/desdinova/commit/1b4d40e0071d4b727f19786f305ee2e85a4badbe)
+- update screenshot [`a1f77f3`](https://github.com/montopolis/desdinova/commit/a1f77f3c293ae93bdde72d85d4a98567d4747c8f)
+- update safelist in tailwind config [`1f346c0`](https://github.com/montopolis/desdinova/commit/1f346c056a0b18eea2fe9b14a097ab591bbf5b56)
+- fix active/inactive menu links in prod [`b322ce4`](https://github.com/montopolis/desdinova/commit/b322ce4178e072c39b8782b44b881131c0f1ed5e)
+- move newsletter signup component to Company page [`e740884`](https://github.com/montopolis/desdinova/commit/e74088437a81cac5d21329ab7a9de70e88d4a879)
+- add basic 404 [`0581926`](https://github.com/montopolis/desdinova/commit/058192628e18b759c31e0546d83c016d57c90efc)
+- moved site config from site.config.mjs to config/siteData.ts [`f0b6084`](https://github.com/montopolis/desdinova/commit/f0b60841263679487b151c827e1579061003e975)
+- remove no longer needed script [`ffd938c`](https://github.com/montopolis/desdinova/commit/ffd938cec9216560293a52c7654d2d7912e1f8de)
+- better way to implement view transition support for flowbite [`28315ff`](https://github.com/montopolis/desdinova/commit/28315ff7233a7a382cf555425578535f0c1346bd)
+- blog now shows posts in desc order, updated to use new siteData [`6b4cd09`](https://github.com/montopolis/desdinova/commit/6b4cd09f1ffd9dc50ffe800b3af4de2523fabbc0)
+- new Announcements banner [`355ca9d`](https://github.com/montopolis/desdinova/commit/355ca9dc1fef346dde5451a2308f14b6167ad531)
+- new home page, updated to use new siteData [`0816642`](https://github.com/montopolis/desdinova/commit/081664203e45e3d1896e58236b975edc4480f23e)
+- increase font on privacy page [`8086fef`](https://github.com/montopolis/desdinova/commit/8086fef70a18280159e3dc20ea25388c7f4eabc7)
+- upgrade to astro 4.14.6 [`3f5aed2`](https://github.com/montopolis/desdinova/commit/3f5aed2224519032d49d6de72119496a90017fa2)
+- add canonical passthru for pages [`10b7a5e`](https://github.com/montopolis/desdinova/commit/10b7a5e927686024b6aa1d7eb7ce262bdb6eb6ec)
+- refactored NavLink [`98ab42b`](https://github.com/montopolis/desdinova/commit/98ab42b6555a35a9149021c11486b8012a916e9a)
+- canonical passthrough, new light/dark mode switch [`30e9457`](https://github.com/montopolis/desdinova/commit/30e9457c7f7f5ac0173f1ffec7b8801ae0f87b11)
+- more flowbite & view transitions work [`129853a`](https://github.com/montopolis/desdinova/commit/129853aac183829777bbd476f67e8e3837df470d)
+- tweak astro config [`a7fab0c`](https://github.com/montopolis/desdinova/commit/a7fab0c14637bee4dcba9d1157ac478f1810c08b)
+- cleanup of siteData [`03e26d9`](https://github.com/montopolis/desdinova/commit/03e26d9b677ee415b276233f697e8bd1c6f62513)
+- updated README [`bd8c866`](https://github.com/montopolis/desdinova/commit/bd8c86626fb28d3854ff660fe77d5182a5fc49ce)
+- update Copyright to use siteData.companyUrl [`6a98340`](https://github.com/montopolis/desdinova/commit/6a98340caed28b4dfc03059e0b90b0b5207da39a)
+- responsive updates [`6bba134`](https://github.com/montopolis/desdinova/commit/6bba134503b0a34230215332c1bf27000add99c0)
+- index.astro color update [`7bc02d2`](https://github.com/montopolis/desdinova/commit/7bc02d245f1e5e7d72eed22980dbcf17295ee2cf)
+
+## [v0.1.2](https://github.com/montopolis/desdinova/compare/v0.1.1...v0.1.2) - 2024-08-28
 
 ### Commits
 
@@ -17,6 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - clean up & optimizations [`75447e6`](https://github.com/montopolis/desdinova/commit/75447e63742ebd6a0e72cb1a2110c14434f904e2)
 - remove console.log() statements [`58ebe02`](https://github.com/montopolis/desdinova/commit/58ebe024105746f1aa0c988a4b66e7c6996f2251)
 - move version to footer [`bc3c865`](https://github.com/montopolis/desdinova/commit/bc3c865ebe02eb12ba2d49d0507b66eb0e028ffb)
+- Release v0.1.2 [`34a408a`](https://github.com/montopolis/desdinova/commit/34a408a73a81272e7eb54bdcf1884f5c7dde9aa6)
 
 ## [v0.1.1](https://github.com/montopolis/desdinova/compare/v0.1.0...v0.1.1) - 2024-08-27
 
