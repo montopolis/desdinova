@@ -5,8 +5,6 @@ import sitemap from "@astrojs/sitemap"
 import icon from "astro-icon"
 import siteData from "./src/config/siteData"
 
-export const darkMode = "media"
-
 export default defineConfig({
     site: siteData.url,
     trailingSlash: "never",
@@ -25,8 +23,8 @@ export default defineConfig({
                     removeAttributeQuotes: false,
                 },
             },
-            Image: false,
-            JavaScript: false,
+            Image: true,
+            JavaScript: true,
             SVG: true,
         }),
         sitemap(),
