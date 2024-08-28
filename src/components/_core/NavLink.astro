@@ -3,7 +3,11 @@ const pathname = new URL(Astro.request.url).pathname
 const url = new URL(Astro.props.href, Astro.url)
 const isExternal = url.host !== Astro.url.host
 import {Icon} from "astro-icon/components"
-import {ACTIVE_LINK, INACTIVE_LINK} from "../../../site.config.mjs"
+
+export const ACTIVE_MENU_CLASS =
+    "flex items-center justify-center py-2 pr-4 pl-3 text-black dark:text-white lg:text-primary-700"
+export const INACTIVE_MENU_CLASS =
+    "flex items-center justify-center py-2 pr-4 pl-3 hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent text-gray-400 dark:text-gray-400"
 
 console.log("pathname=" + pathname)
 console.log(url)
@@ -21,7 +25,7 @@ const {title, href, path = href, target = "_self", icon = ""} = Astro.props
 
 <a
     href={href}
-    class={pathname === path ? " " + ACTIVE_LINK : " " + INACTIVE_LINK}
+    class={pathname === path ? ACTIVE_MENU_CLASS : INACTIVE_MENU_CLASS}
     aria-current={pathname === path ? "page" : null}
     rel={isExternal ? "noopener" : null}
     target={target}>
@@ -31,8 +35,8 @@ const {title, href, path = href, target = "_self", icon = ""} = Astro.props
                 name={icon}
                 class={
                     pathname === path
-                        ? "mr-1 inline h-4 w-4 " + {ACTIVE_LINK}
-                        : "mr-1 inline h-4 w-4 " + {INACTIVE_LINK}
+                        ? "mr-1 inline h-4 w-4 " + {ACTIVE_MENU_CLASS}
+                        : "mr-1 inline h-4 w-4 " + {INACTIVE_MENU_CLASS}
                 }
             />
         )
