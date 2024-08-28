@@ -37,15 +37,24 @@ const presentablePageDescription = pageDescription
     <ViewTransitions fallback="swap" />
 </head>
 
-<script>
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC (Flash of Unstyled Content)
-    if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-        document.documentElement.classList.add("dark")
-    } else {
+<script is:inline>
+    const theme = (() => {
+        if (
+            typeof localStorage !== "undefined" &&
+            localStorage.getItem("theme")
+        ) {
+            return localStorage.getItem("theme")
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            return "dark"
+        }
+        return "light"
+    })()
+
+    if (theme === "light") {
         document.documentElement.classList.remove("dark")
+    } else {
+        document.documentElement.classList.add("dark")
     }
+    window.localStorage.setItem("theme", theme)
 </script>

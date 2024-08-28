@@ -2,3 +2,15 @@
     is:inline
     src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"
 ></script>
+
+<script is:inline>
+    // this is needed so flowbite js library works with view transitions
+    document.addEventListener("astro:after-swap", () => {
+        // Importing the Flowbite library
+        import("flowbite").then(flowbite => {
+            // Initiating Flowbite
+            flowbite.initFlowbite()
+        })
+        window.localStorage.setItem("theme", theme)
+    })
+</script>
