@@ -5,7 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.0](https://github.com/montopolis/desdinova/compare/v0.0.2...v0.1.0)
+## [v0.1.1](https://github.com/montopolis/desdinova/compare/v0.1.0...v0.1.1)
+
+### Commits
+
+- provide loading prop for SiteLogo [`5a1d7d4`](https://github.com/montopolis/desdinova/commit/5a1d7d4405eb5503761d39d911a00c8a196ac003)
+- refactor BottomMenu [`b5fcda1`](https://github.com/montopolis/desdinova/commit/b5fcda19c36281b812d8b035f4ccbfd5b9474868)
+- moved site configuration variables from astro.config.mjs to site.config.mjs to improve dev performance [`5598523`](https://github.com/montopolis/desdinova/commit/559852368a807de91d74abf7c9857f42080c726c)
+- fix light mode menu colors not working [`c09cdb3`](https://github.com/montopolis/desdinova/commit/c09cdb30a4fe91474e1b42bce5a1f50d6fb83cda)
+- typo [`76f05e9`](https://github.com/montopolis/desdinova/commit/76f05e94779752d8217bf18d0febbdce8323a85c)
+- increase size of social icons [`7ec99f1`](https://github.com/montopolis/desdinova/commit/7ec99f1d6d49a4ab98e61400a5fd93f3dee86fa4)
+- update README [`00e217b`](https://github.com/montopolis/desdinova/commit/00e217be5cd28d690c25237a9248fcc9fb6b0cc8)
+
+## [v0.1.0](https://github.com/montopolis/desdinova/compare/v0.0.2...v0.1.0) - 2024-08-27
 
 ### Commits
 
@@ -28,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - mobile menu now works when view transitions enabled using flowbite [`ca05e80`](https://github.com/montopolis/desdinova/commit/ca05e8000a668f241fe16e5b5485ec8fe500cd3f)
 - rescaled screenshot images [`06bbb2a`](https://github.com/montopolis/desdinova/commit/06bbb2a9e81dfc213931a7a4eb3cda29e6e88fdb)
 - fixed anchors in README [`fe2f309`](https://github.com/montopolis/desdinova/commit/fe2f30979d95b8380b0f9db8322e52c777e3a4d5)
+- Release v0.1.0 [`0453c01`](https://github.com/montopolis/desdinova/commit/0453c01c3d7bfc4cfe62a95857d8dc3c0128ef55)
 
 ## [v0.0.2](https://github.com/montopolis/desdinova/compare/v0.0.1...v0.0.2) - 2024-08-26
 

@@ -28,11 +28,12 @@
 -   Icon integration via Iconify
 
 ## To-Do List
-- [ ]  Related blog posts
-- [ ]  Pagination for blog posts
-- [ ]  Blog post tags
-- [ ]  Blog post reading time
-- [ ]  Mega menu
+
+-   [ ] Related blog posts
+-   [ ] Pagination for blog posts
+-   [ ] Blog post tags
+-   [ ] Blog post reading time
+-   [ ] Mega menu
 
 ## Future Ideas
 
@@ -157,9 +158,9 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
 ## Updating Colors
 
-- You can update the `primary` color palette in `tailwind.config.mjs`
-- You can get color palettes from https://uicolors.app/
-- You can also get color palettes from https://flowbite.com/blocks/marketing/header/#default-header-navigation
+-   You can update the `primary` color palette in `tailwind.config.mjs`
+-   You can get color palettes from https://uicolors.app/
+-   You can also get color palettes from https://flowbite.com/blocks/marketing/header/#default-header-navigation
 
 ---
 
