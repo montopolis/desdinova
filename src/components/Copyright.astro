@@ -5,5 +5,10 @@ const year = new Date().getFullYear()
 
 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
     >&copy; 2021-{year}
-    <a href="/" class="hover:underline">{siteData.company}</a> - All Rights Reserved.</span
+    <b
+        ><a href={siteData.companyUrl} class="hover:underline"
+            >{siteData.company}</a
+        ></b
+    >
+    - All Rights Reserved.</span
 >
