@@ -1,5 +1,5 @@
 ---
-import {initFlowbite} from "flowbite"
+
 ---
 
 <script
@@ -12,6 +12,5 @@ import {initFlowbite} from "flowbite"
     // TODO: https://astro.build/blog/future-of-astro-zero-js-view-transitions/
     document.addEventListener("astro:after-swap", () => {
         initFlowbite()
-        window.localStorage.setItem("theme", theme)
     })
 </script>
