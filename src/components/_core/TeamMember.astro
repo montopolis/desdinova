@@ -8,16 +8,22 @@ interface Props {
     imagePath: string
     title: string
     description: string
+    social1name?: string
     social1url?: string
     social1icon?: string
+    social2name?: string
     social2url?: string
     social2icon?: string
+    social3name?: string
     social3url?: string
     social3icon?: string
+    social4name?: string
     social4url?: string
     social4icon?: string
+    social5name?: string
     social5url?: string
     social5icon?: string
+    social6name?: string
     social6url?: string
     social6icon?: string
 }
@@ -27,16 +33,22 @@ let {
     imagePath,
     title,
     description,
+    social1name = "",
     social1url = "",
     social1icon = "",
+    social2name = "",
     social2url = "",
     social2icon = "",
+    social3name = "",
     social3url = "",
     social3icon = "",
+    social4name = "",
     social4url = "",
     social4icon = "",
+    social5name = "",
     social5url = "",
     social5icon = "",
+    social6name = "",
     social6url = "",
     social6icon = "",
 } = Astro.props
@@ -59,6 +71,7 @@ if (!images[imagePath])
         <Image
             class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg lg:w-52"
             src={images[imagePath]()}
+            loading="eager"
             alt={name}
         />
     </a>
@@ -78,6 +91,7 @@ if (!images[imagePath])
                     <li>
                         <a
                             href={social1url}
+                            aria-label={social1name}
                             class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <Icon name={social1icon} class="h-5 w-5" />
                         </a>
@@ -89,6 +103,7 @@ if (!images[imagePath])
                     <li>
                         <a
                             href={social2url}
+                            aria-label={social2name}
                             class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <Icon name={social2icon} class="h-5 w-5" />
                         </a>
@@ -100,6 +115,7 @@ if (!images[imagePath])
                     <li>
                         <a
                             href={social3url}
+                            aria-label={social3name}
                             class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <Icon name={social3icon} class="h-5 w-5" />
                         </a>
@@ -111,6 +127,7 @@ if (!images[imagePath])
                     <li>
                         <a
                             href={social4url}
+                            aria-label={social4name}
                             class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <Icon name={social4icon} class="h-5 w-5" />
                         </a>
@@ -122,6 +139,7 @@ if (!images[imagePath])
                     <li>
                         <a
                             href={social5url}
+                            aria-label={social5name}
                             class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <Icon name={social5icon} class="h-5 w-5" />
                         </a>
@@ -133,6 +151,7 @@ if (!images[imagePath])
                     <li>
                         <a
                             href={social6url}
+                            aria-label={social6name}
                             class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <Icon name={social6icon} class="h-5 w-5" />
                         </a>
