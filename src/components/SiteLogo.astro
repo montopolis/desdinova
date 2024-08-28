@@ -1,12 +1,12 @@
 ---
 import {Image} from "astro:assets"
 import Logo from "/src/assets/images/logo.png"
-import LogoSquare from "/src/assets/images/logo-square.png"
+// import LogoSquare from "/src/assets/images/logo-square.png"
 
-import {SITE_DESCRIPTION} from "../../astro.config.mjs"
+import {SITE_DESCRIPTION} from "../../site.config.mjs"
 
 interface Props {
-    loading?: string
+    loading?: "eager" | "lazy" | null
 }
 
 const {loading = "lazy"} = Astro.props

@@ -9,8 +9,8 @@ import "@fontsource-variable/aleo"
 import "@fontsource-variable/jetbrains-mono"
 
 import {AstroSeo} from "@astrolib/seo"
-import {SITE_DESCRIPTION} from "../../../astro.config.mjs"
-import {SITE_TITLE} from "../../../astro.config.mjs"
+import {SITE_DESCRIPTION} from "../../../site.config.mjs"
+import {SITE_TITLE} from "../../../site.config.mjs"
 import Analytics from "../Analytics.astro"
 const {pageTitle, pageDescription} = Astro.props
 const presentablePageTitle = pageTitle ? " / " + pageTitle : ""
@@ -21,7 +21,7 @@ const presentablePageDescription = pageDescription
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--sitemap will be automatically built by @astrojs/sitemap, the following line is required-->
     <link rel="sitemap" href="/sitemap-index.xml" />
