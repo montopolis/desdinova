@@ -18,19 +18,22 @@
 
 ## Features
 
--   Automatic support for both light and dark modes
+-   Automatic support for light and dark modes
 -   Fully responsive design
 -   Automatic generation of `robots.txt` and `sitemap.xml`
 -   SEO optimization
 -   Basic blog functionality
--   Includes some free Flowbite blocks pre-configured and optimized (consider paying for access to all blocks)
--   Video embedding (YouTube, Vimeo, and Twitter/X – if still supported)
+-   Includes some free Flowbite blocks pre-configured and optimized (highly recommended paying for access to all blocks!)
+-   Video embedding (YouTube, Vimeo)
 -   Icon integration via Iconify
+-   View Transitions
+-   Custom 404 page
 
 ## To-Do List
 
 -   [ ] Related blog posts
 -   [ ] Pagination for blog posts
+-   [ ] Blog post categories
 -   [ ] Blog post tags
 -   [ ] Blog post reading time
 -   [ ] Mega menu
@@ -55,11 +58,7 @@
 
 ### do basic configuration
 
-1. Update `astro.config.mjs`
-
--   Set the `SITE_*` variables
--   Update the `site` field
-
+1. Update `src/config/siteData.ts` values under **UPDATE BELOW FIRST**
 2. Update the Logo [see below](#updating-the-logo)
 3. Update the Favicon [see below](#updating-the-favicon)
 4. Update the Font (if necessary [see below](#updating-the-font))
@@ -73,18 +72,18 @@
 
 ## Next Steps
 
-1. Customize the Top Menu in `/src/components/TopMenu.astro`
-2. Customize the Bottom Menu in `/src/components/BottomMenu.astro`
-3. Add any required scripts to `/src/components/Analytics.astro`
-4. Update `/src/pages/index.astro` as your homepage
-5. Ideally, leave the `/src/components/_core` folder untouched to facilitate future updates
+1. Customize the Top Menu in `src/components/TopMenu.astro`
+2. Customize the Bottom Menu in `src/components/BottomMenu.astro`
+3. Add any required scripts to `src/components/Analytics.astro`
+4. Update `src/pages/index.astro` as your homepage
+5. Ideally, leave the `src/components/_core` folder untouched to facilitate future updates
 
 ## Adding a New Page (A Basic Flowbite Workflow)
 
-1. Copy `/src/pages/_starterPage.astro` to a new file within `/src/pages`
+1. Copy `src/pages/_starterPage.astro` to a new file within `src/pages`
 2. Update `pageTitle` and `pageDescription` in `<Layout pageTitle="_starter" pageDescription="_starter Page">`
 3. Find a Flowbite component or block at [Flowbite](https://flowbite.com) that you wish to use
-4. Click "Copy Code" (CSS not needed)
+4. Click "Copy Code" (CSS and JS are not needed)
 5. Paste the code inside `<Layout></Layout>`
 6. Customize the component/block
 7. Review, edit, and refine until satisfied with your page
@@ -127,9 +126,9 @@
 
 ## Updating the Logo
 
--   Replace `/src/images/logo-square.png` with your square logo
--   Replace `/src/images/logo.png` with your primary logo
--   For further customization, edit `/src/components/SiteLogo.astro`
+-   Replace `src/images/logo-square.png` with your square logo
+-   Replace `src/images/logo.png` with your primary logo
+-   For further customization, edit `src/components/SiteLogo.astro`
 
 ## Updating the Favicon
 
@@ -138,22 +137,22 @@
 Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
 -   Update `favicon.svg` and `favicon.png` in the `/public` folder
--   Note: Favicon settings are in `/src/components/_core/Head.astro`
+-   Note: Favicon settings are in `src/components/_core/Head.astro`
 
 ## Updating the Font
 
 ### Method #1: Bundled via Fontsource
 
 -   Add the font to `package.json` from [Fontsource](https://fontsource.org)
--   Import the font in `/src/components/_core/Head.astro`
+-   Import the font in `src/components/_core/Head.astro`
 
 ### Method #2: Google Fonts (Enable Cloudflare Fonts recommended)
 
--   Include the font in `/src/components/_core/Head.astro`
+-   Include the font in `src/components/_core/Head.astro`
 
 ### Updating All Methods
 
--   Update the CSS styles at the bottom of `/src/Layout/Layout.astro`
+-   Update the CSS styles at the bottom of `src/Layout/Layout.astro`
 -   Modify the font settings in `tailwind.config.mjs`
 
 ## Updating Colors
@@ -182,7 +181,7 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
 ### Update Approaches
 
-1. **Easy:** If your changes are limited to the `/src/pages` folder, copy over other content, re-run `npm install`, and
+1. **Easy:** If your changes are limited to the `src/pages` folder, copy over other content, re-run `npm install`, and
    validate
 2. **Tricky:** Apply specific updates from the Desdinova repository to your site as needed
 3. **Full Reboot:** Set up a new Desdinova instance and refactor your existing site into it (this is my annual practice
@@ -194,18 +193,23 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
 ## Image Handling
 
--   Images placed in `/src/assets/images` will be optimized by Astro if imported
+-   Images placed in `src/assets/images` will be optimized by Astro if imported
 -   Refer to [Astro Image Guide](https://docs.astro.build/en/guides/images/#where-to-store-images)
 -   Alternatively, store images in the `/public` directory
 
 ## Announcement Banner
 
--   Customize the banner in `/src/components/Announcement.astro`
--   To disable the banner, comment out `<Announcement />` in `/src/pages/index.astro`
+-   Customize the banner in `src/components/Announcement.astro`
+-   To disable the banner, comment out `<Announcement />` in `src/pages/index.astro`
 
 ## Scripts (e.g., Analytics)
 
--   Place required scripts in `/src/components/Analytics.astro`
+-   Place required scripts in `src/components/Analytics.astro`
+
+## Configuring Redirects
+
+-   You can specify a mapping of permanent redirects in your Astro config with the redirects value. For most redirects, this is a mapping of an old route to the new route:
+-   https://docs.astro.build/en/guides/routing/#configured-redirects
 
 ## Environment Support (Local/Staging/Production)
 
