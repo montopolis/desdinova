@@ -4,12 +4,16 @@ import Footer from "../components/Footer.astro"
 import Head from "../components/_core/Head.astro"
 import Foot from "../components/_core/Foot.astro"
 import siteData from "../config/siteData"
-const {pageTitle, pageDescription} = Astro.props
+const {pageTitle, pageDescription, canonical} = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
-    <Head pageTitle={pageTitle} pageDescription={pageDescription} />
+    <Head
+        pageTitle={pageTitle}
+        pageDescription={pageDescription}
+        canonical={canonical}
+    />
 
     <body class={siteData.colors.mainBackground}>
         <Header />
