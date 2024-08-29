@@ -1,3 +1,4 @@
+import defaultTheme from "tailwindcss/defaultTheme"
 import colors from "tailwindcss/colors"
 
 /** @type {import("tailwindcss").Config} */
@@ -45,9 +46,12 @@ export default {
             },
             fontFamily: {
                 body: ["Aleo Variable"],
-                sans: ["Montserrat Variable"],
-                serif: ["Aleo Variable"],
-                mono: ["JetBrains Mono Variable"],
+                sans: ["Montserrat Variable", ...defaultTheme.fontFamily.sans],
+                serif: ["Aleo Variable", ...defaultTheme.fontFamily.serif],
+                mono: [
+                    "JetBrains Mono Variable",
+                    ...defaultTheme.fontFamily.mono,
+                ],
             },
         },
     },
