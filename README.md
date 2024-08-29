@@ -31,6 +31,7 @@
 
 ## To-Do List
 
+-   [x] retina images
 -   [ ] Related blog posts
 -   [ ] Pagination for blog posts
 -   [ ] Blog post categories
@@ -137,22 +138,21 @@
 Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
 -   Update `favicon.svg` and `favicon.png` in the `/public` folder
--   Note: Favicon settings are in `src/components/_core/Head.astro`
+-   Note: Nothing else necessary for most browsers. Further customizations can be made in `src/components/Favicon.astro`
 
 ## Updating the Font
 
-### Method #1: Bundled via Fontsource
+### Method #1: Bundled via Fontsource (recommended)
 
 -   Add the font to `package.json` from [Fontsource](https://fontsource.org)
--   Import the font in `src/components/_core/Head.astro`
+-   Import the font in `src/components/Fonts.astro`
 
-### Method #2: Google Fonts (Enable Cloudflare Fonts recommended)
+### Method #2: Google Fonts (not recommended, but if you do enable Cloudflare Fonts)
 
--   Include the font in `src/components/_core/Head.astro`
+-   Include the font in `src/components/Font.astro`
 
-### Updating All Methods
+### For All Methods
 
--   Update the CSS styles at the bottom of `src/Layout/Layout.astro`
 -   Modify the font settings in `tailwind.config.mjs`
 
 ## Updating Colors
