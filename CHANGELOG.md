@@ -5,7 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.2.0](https://github.com/montopolis/desdinova/compare/v0.1.2...v0.2.0)
+## [v0.2.1](https://github.com/montopolis/desdinova/compare/v0.2.0...v0.2.1)
+
+### Commits
+
+- update screenshots [`ec8e02c`](https://github.com/montopolis/desdinova/commit/ec8e02c02b9fd6c6d7e3d4c4801d15775bb7b1d0)
+- typo [`f681c76`](https://github.com/montopolis/desdinova/commit/f681c76296ad2a105d9ffa528ffbe3b8a1e80e2f)
+- use Picture component for SiteLogo [`e3c08b7`](https://github.com/montopolis/desdinova/commit/e3c08b7f2ad8803cfc98645c951cdad42d7f58bf)
+- set alt tag for header and footer logos [`3b3428d`](https://github.com/montopolis/desdinova/commit/3b3428de04617cec363c3e2d19a9e54a49bd4175)
+- announcement banner cleanup [`dce4bf8`](https://github.com/montopolis/desdinova/commit/dce4bf879c4f53555c4ad047eb8cf65e643ca27e)
+- ignore bun.lockb [`13f346d`](https://github.com/montopolis/desdinova/commit/13f346dad9b8e46ada19055893eb511c2a92dc20)
+- move TeamMember component out of _core [`0d524f3`](https://github.com/montopolis/desdinova/commit/0d524f3d32fd90fd4bb05f2ccb598f5e0e6dd81d)
+- blog post image now support retina/hidpi [`fafa49f`](https://github.com/montopolis/desdinova/commit/fafa49f0479732e7e93c6fd463c4b5450da98f55)
+- add back link [`a5c2f32`](https://github.com/montopolis/desdinova/commit/a5c2f32b53a45bc925249792b5959f09a1faa2c0)
+- set default fonts from tailwind defaultTheme [`e7040a0`](https://github.com/montopolis/desdinova/commit/e7040a0851ec913646bdf69abe20d55206e37bc4)
+- moved TeamMember component out of _core [`f0b4f45`](https://github.com/montopolis/desdinova/commit/f0b4f45452031a6336bfa7717a28aef4332e203c)
+- refactored _core/Head.astro to make it easier to modify fonts and favicon without changing _code [`8e72a24`](https://github.com/montopolis/desdinova/commit/8e72a24b5c5618bc075aa075549b908301bc64fc)
+- updated README [`88f3c59`](https://github.com/montopolis/desdinova/commit/88f3c59099eb7587d0d85a8d3df5b4f3fa1aed60)
+
+## [v0.2.0](https://github.com/montopolis/desdinova/compare/v0.1.2...v0.2.0) - 2024-08-28
 
 ### Commits
 
@@ -35,6 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - update Copyright to use siteData.companyUrl [`6a98340`](https://github.com/montopolis/desdinova/commit/6a98340caed28b4dfc03059e0b90b0b5207da39a)
 - responsive updates [`6bba134`](https://github.com/montopolis/desdinova/commit/6bba134503b0a34230215332c1bf27000add99c0)
 - index.astro color update [`7bc02d2`](https://github.com/montopolis/desdinova/commit/7bc02d245f1e5e7d72eed22980dbcf17295ee2cf)
+- Release v0.2.0 [`d62cf50`](https://github.com/montopolis/desdinova/commit/d62cf50bd3b0392047d7593ca3a842cfcf189d3c)
 
 ## [v0.1.2](https://github.com/montopolis/desdinova/compare/v0.1.1...v0.1.2) - 2024-08-28
 
