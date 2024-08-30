@@ -6,6 +6,9 @@ export interface SiteDataProps {
     company: string
     companyUrl: string
 
+    localeDateString: string
+    timezone: string
+
     author: {
         name: string
         email: string
@@ -41,6 +44,10 @@ const siteData: SiteDataProps = {
     // company/organization & url for responsible party (see Footer & Privacy)
     company: "A Company",
     companyUrl: "https://a-company.com",
+
+    localeDateString: "en-us",
+    // list of timezones: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    timezone: "America/Chicago",
 
     ////////////////////////////////////////
     // LEAVE EVERYTHING BELOW ALONE FOR NOW

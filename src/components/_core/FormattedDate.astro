@@ -1,4 +1,5 @@
 ---
+import siteData from "../../config/siteData"
 interface Props {
     date: Date
 }
@@ -6,12 +7,12 @@ interface Props {
 const {date} = Astro.props
 ---
 
-<time datetime={date.toISOString()}>
+<time>
     {
-        date.toLocaleDateString("en-us", {
+        new Intl.DateTimeFormat(siteData.localeDateString, {
             year: "numeric",
             month: "short",
             day: "numeric",
-        })
+        }).format(date)
     }
 </time>
