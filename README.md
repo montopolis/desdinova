@@ -202,6 +202,14 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 -   Customize the banner in `src/components/Announcement.astro`
 -   To disable the banner, comment out `<Announcement />` in `src/pages/index.astro`
 
+## Change Blog Posts Sort Order
+
+- see notes in `src/scripts/util.ts`
+
+## Draft Blog Posts
+
+Blog posts that are marked `draft=true` are not published to Production. Just add `draft=true` to the frontmatter/metadata at the top of the blog post.
+
 ## Scripts (e.g., Analytics)
 
 -   Place required scripts in `src/components/Analytics.astro`
@@ -255,8 +263,8 @@ This allows specific scripts or HTML to be included as needed per environment.
 -   [Playform Compress](https://github.com/PlayForm/Compress)
 -   [Fontsource](https://fontsource.org/docs/getting-started/introduction)
 -   [Tailwind](https://tailwindcss.com)
+-   [Tailwind Typography](https://tailwindcss.com/docs/plugins#typography)
 -   [Flowbite](https://flowbite.com/blocks/)
--   [Flowbite Typography](https://flowbite.com/docs/components/typography/)
 -   [Iconify](https://icon-sets.iconify.design/)
 -   [Privacy Policy Template](https://github.com/ArthurGareginyan/privacy-policy-template)
 
