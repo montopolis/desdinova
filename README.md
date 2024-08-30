@@ -204,7 +204,7 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
 ## Change Blog Posts Sort Order
 
-- see notes in `src/scripts/util.ts`
+-   see notes in `src/scripts/util.ts`
 
 ## Draft Blog Posts
 

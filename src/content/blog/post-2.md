@@ -42,7 +42,7 @@ Ut enim ad minim veniam, _quis nostrud exercitation_ ullamco **laboris nisi ut**
 
 ## Emphasis
 
-*Italicized text with lorem ipsum*
+_Italicized text with lorem ipsum_
 
 **Bold text with dolor sit amet**
 
@@ -54,17 +54,17 @@ Ut enim ad minim veniam, _quis nostrud exercitation_ ullamco **laboris nisi ut**
 
 ### Unordered List
 
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-  - Sed do eiusmod tempor
-  - Incididunt ut labore et dolore
-  
+-   Lorem ipsum dolor sit amet
+-   Consectetur adipiscing elit
+    -   Sed do eiusmod tempor
+    -   Incididunt ut labore et dolore
+
 ### Ordered List
 
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
-   1. Sed do eiusmod tempor
-   2. Incididunt ut labore et dolore
+    1. Sed do eiusmod tempor
+    2. Incididunt ut labore et dolore
 
 ## Code
 
@@ -73,9 +73,9 @@ Inline `code` has `back-ticks around` it.
 ```javascript
 // Code block in JavaScript
 function greet() {
-    console.log("Hello, world!");
+    console.log("Hello, world!")
 }
-greet();
+greet()
 ```
 
 ## Links
@@ -90,10 +90,10 @@ Lorem ipsum dolor sit amet, [consectetur adipiscing elit](https://www.example.co
 
 ## Tables
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Lorem ipsum |
-| Paragraph   | Dolor sit   |
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Lorem ipsum |
+| Paragraph | Dolor sit   |
 
 ## Conclusion
 

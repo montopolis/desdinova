@@ -5,7 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.2.1](https://github.com/montopolis/desdinova/compare/v0.2.0...v0.2.1)
+## [v0.3.0](https://github.com/montopolis/desdinova/compare/v0.2.1...v0.3.0)
+
+### Commits
+
+- typo [`9614de8`](https://github.com/montopolis/desdinova/commit/9614de8b3da241054cdfde1ca0c86daa465f482e)
+- refactored to use Intl.DateTimeFormat [`d5b73c0`](https://github.com/montopolis/desdinova/commit/d5b73c0bf118d5be5a54b7fe178da80fda0f2d54)
+- updated blog variables, updated blog styling, fixed blog post html titles, updated sample blog posts [`a6719e8`](https://github.com/montopolis/desdinova/commit/a6719e8c9a0037f2e6a3adc4ad4b1a725a62f50d)
+- replace flowbite/typography with tailwind/typography [`1a1fe5d`](https://github.com/montopolis/desdinova/commit/1a1fe5d8994628385a13e0500a3183f79931dc02)
+- updated blog post styling [`7b09fac`](https://github.com/montopolis/desdinova/commit/7b09facf1bce9f9010e48af38f1d5c44be0e3d88)
+- upgrade to astro 4.15.1 [`c665063`](https://github.com/montopolis/desdinova/commit/c665063209a57db0a031b895081727959e7a5c60)
+- new sample blog posts [`af68f31`](https://github.com/montopolis/desdinova/commit/af68f313d5de7e5fd6442d98ebec7496ee8e0b9f)
+- update Footer and Header to use siteData.colors.mainBackground [`7d7c2b0`](https://github.com/montopolis/desdinova/commit/7d7c2b0a0c0435eead7a9c830da18458b705b5de)
+- update MarkdownLayout to use tailwind typography and fix width [`1a65d74`](https://github.com/montopolis/desdinova/commit/1a65d74050518ff619ea36aa4dba4cc4ae5963fd)
+- fix styling of Announcement [`4bafe52`](https://github.com/montopolis/desdinova/commit/4bafe5223bc3979952b0046e22818d8128586c4f)
+- update default url [`33a1188`](https://github.com/montopolis/desdinova/commit/33a118832a3ac328ecd989ce66d5fb170ccef573)
+- filter out draft blog posts in production [`b466de8`](https://github.com/montopolis/desdinova/commit/b466de836e06d8cbe98a70ac58e5ea19cd976e67)
+- document ascending/descending blog post date sort [`6a3d8b5`](https://github.com/montopolis/desdinova/commit/6a3d8b5edea0bcea665276cdbfa1ed1aade75750)
+- update README [`ccd472c`](https://github.com/montopolis/desdinova/commit/ccd472ce73e25ad9880648e47bb31da0a515b4d5)
+- update error message on failing blog post image [`b65a0a2`](https://github.com/montopolis/desdinova/commit/b65a0a20ffb38d2df195f62e0435c9001759b78b)
+
+## [v0.2.1](https://github.com/montopolis/desdinova/compare/v0.2.0...v0.2.1) - 2024-08-29
 
 ### Commits
 
@@ -22,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - moved TeamMember component out of _core [`f0b4f45`](https://github.com/montopolis/desdinova/commit/f0b4f45452031a6336bfa7717a28aef4332e203c)
 - refactored _core/Head.astro to make it easier to modify fonts and favicon without changing _code [`8e72a24`](https://github.com/montopolis/desdinova/commit/8e72a24b5c5618bc075aa075549b908301bc64fc)
 - updated README [`88f3c59`](https://github.com/montopolis/desdinova/commit/88f3c59099eb7587d0d85a8d3df5b4f3fa1aed60)
+- Release v0.2.1 [`fcdd030`](https://github.com/montopolis/desdinova/commit/fcdd0302976c33f68c4220b76303f3aee4f51370)
 
 ## [v0.2.0](https://github.com/montopolis/desdinova/compare/v0.1.2...v0.2.0) - 2024-08-28
 
