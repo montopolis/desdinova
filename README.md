@@ -127,8 +127,8 @@
 
 ## Updating the Logo
 
--   Replace `src/images/logo-square.png` with your square logo
--   Replace `src/images/logo.png` with your primary logo
+-   Replace `src/assets/images/logo-square.png` with your square logo
+-   Replace `src/assets/images/logo.png` with your primary logo
 -   For further customization, edit `src/components/SiteLogo.astro`
 
 ## Updating the Favicon
