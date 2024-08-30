@@ -1,5 +1,6 @@
 ---
 import {getCollection} from "astro:content"
+import {getPublishedAndSortedPosts} from "../scripts/util"
 import Layout from "../layouts/Layout.astro"
 import FormattedDate from "../components/_core/FormattedDate.astro"
 import BlogPostImage from "../components/_core/BlogPostImage.astro"
@@ -8,9 +9,7 @@ import {Icon} from "astro-icon/components"
 import siteData from "../config/siteData"
 
 // Sort posts in descending order (newest to oldest)
-const posts = (await getCollection("blog")).sort(
-    (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
-)
+const posts = getPublishedAndSortedPosts(await getCollection("blog"))
 ---
 
 <Layout pageTitle="Blog" pageDescription="Blog">
