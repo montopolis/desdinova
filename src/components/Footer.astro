@@ -6,21 +6,23 @@ import Copyright from "./Copyright.astro"
 import siteData from "../config/siteData"
 ---
 
-<footer class="bg-white p-4 md:p-8 lg:p-10 dark:bg-gray-800">
-    <div class="mx-auto max-w-screen-xl text-center">
-        <div class="mb-3 flex items-center justify-center">
-            <SiteLogo loading="eager" alt={siteData.name + " bottom"} />
-        </div>
-        <p class="my-6 text-gray-500 dark:text-gray-400">
-            {siteData.name} v0.2.1
-        </p>
-        <BottomMenu />
-        <hr
-            class="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700"
-        />
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <Copyright />
-            <Socials />
+<footer class="p-4 md:p-8 lg:p-10">
+    <div class={siteData.colors.mainBackground}>
+        <div class="mx-auto max-w-screen-xl text-center">
+            <div class="mb-3 flex items-center justify-center">
+                <SiteLogo loading="eager" alt={siteData.name + " bottom"} />
+            </div>
+            <p class="my-6 text-gray-500 dark:text-gray-400">
+                {siteData.name} v0.2.1
+            </p>
+            <BottomMenu />
+            <hr
+                class="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700"
+            />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <Copyright />
+                <Socials />
+            </div>
         </div>
     </div>
 </footer>

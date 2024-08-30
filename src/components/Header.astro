@@ -4,8 +4,8 @@ import TopMenu from "./TopMenu.astro"
 import siteData from "../config/siteData"
 ---
 
-<header>
-    <nav class="border-gray-200 bg-white px-4 py-2.5 lg:px-6 dark:bg-gray-800">
+<header class={siteData.colors.mainBackground}>
+    <nav class="border-gray-200 px-4 py-2.5 lg:px-6">
         <div
             class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
             <SiteLogo loading="eager" alt={siteData.name + " top"} />
