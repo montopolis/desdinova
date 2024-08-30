@@ -1,10 +1,12 @@
 ---
 title: "My First Blog Post"
-pubDate: 2024-07-01
-updatedDate: 2024-07-15
+publishedDate: 2024-07-01T12:00:00
+updatedDate: 2024-07-15T12:00:00
 category: info
-description: "test"
-heroImage: "/src/assets/images/blog/blog-post-heroimage1.png"
+excerpt: "test"
+image: "/src/assets/images/blog/blog-post-heroimage1.png"
+tags:
+  - release
 ---
 
 First blog post!

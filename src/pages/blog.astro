@@ -9,7 +9,7 @@ import siteData from "../config/siteData"
 
 // Sort posts in descending order (newest to oldest)
 const posts = (await getCollection("blog")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+    (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
 )
 ---
 
@@ -33,7 +33,7 @@ const posts = (await getCollection("blog")).sort(
                             <div class="mb-5">
                                 <a href={`/${posts.slug}/`}>
                                     <BlogPostImage
-                                        imagePath={posts.data.heroImage}
+                                        imagePath={posts.data.image}
                                         altText={`${posts.data.title}`}
                                     />
                                 </a>
@@ -51,7 +51,9 @@ const posts = (await getCollection("blog")).sort(
                                         name="tabler:clock"
                                         class="-mt-0.5 inline-block h-4 w-4 dark:text-gray-400"
                                     />
-                                    <FormattedDate date={posts.data.pubDate} />
+                                    <FormattedDate
+                                        date={posts.data.publishedDate}
+                                    />
                                 </span>
                             </div>
                             <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -60,7 +62,7 @@ const posts = (await getCollection("blog")).sort(
                                 </a>
                             </h2>
                             <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-                                {posts.data.description}
+                                {posts.data.excerpt}
                             </p>
 
                             <div class="flex items-center justify-between">
