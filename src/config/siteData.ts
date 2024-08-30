@@ -35,7 +35,7 @@ const siteData: SiteDataProps = {
     ////////////////////////////////////////
 
     // url should be your fully qualified public URL
-    url: "https://astro.build",
+    url: "https://desdinova-demo.pages.dev",
     // your website name
     name: "Desdinova",
     // your website description, which is also default SEO text
