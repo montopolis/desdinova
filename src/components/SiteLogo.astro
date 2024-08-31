@@ -9,10 +9,11 @@ interface Props {
     alt?: string
 }
 
+const url = new URL(Astro.url)
 const {loading = "lazy", alt = siteData.name} = Astro.props
 ---
 
-<a href={siteData.url} class="flex items-center">
+<a href={url.origin}>
     <!--Square Logo with Text Site Title-->
     <Picture
         src={LogoSquare}
