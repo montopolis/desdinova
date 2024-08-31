@@ -5,9 +5,11 @@ import {Picture} from "astro:assets"
 interface Props {
     imagePath?: string
     altText: string
+    width?: number
+    height?: number
 }
 
-let {imagePath, altText} = Astro.props
+let {imagePath, altText, width = 512, height = 512} = Astro.props
 const images = import.meta.glob<{default: ImageMetadata}>(
     "/src/assets/images/blog/*.{jpeg,jpg,png,gif}",
 )
@@ -16,13 +18,15 @@ if (imagePath == undefined) {
 }
 if (!images[imagePath])
     throw new Error(
-        `"${imagePath}" does not exist in glob: "/src/assets/images/blog/*.{jpeg,jpg,png,gif}"`,
+        `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
     )
 ---
 
 <Picture
     src={images[imagePath]()}
     densities={[1.5, 2]}
+    width={width}
+    height={height}
     alt={altText}
     loading="eager"
 />
