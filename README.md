@@ -38,6 +38,7 @@
 -   [ ] Blog post tags
 -   [ ] Blog post reading time
 -   [ ] Mega menu
+-   [ ] Improve UI of Search
 
 ## Future Ideas
 
@@ -260,6 +261,7 @@ This allows specific scripts or HTML to be included as needed per environment.
 -   [Astro Sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
 -   [Astro Icon](https://github.com/natemoo-re/astro-icon#readme)
 -   [Astro Embed](https://astro-embed.netlify.app/getting-started/)
+-   [Astro Pagefind](https://github.com/shishkin/astro-pagefind)
 -   [Playform Compress](https://github.com/PlayForm/Compress)
 -   [Fontsource](https://fontsource.org/docs/getting-started/introduction)
 -   [Tailwind](https://tailwindcss.com)
