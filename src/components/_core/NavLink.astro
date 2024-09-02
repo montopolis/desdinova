@@ -11,9 +11,17 @@ interface Props {
     path?: string
     target?: string
     icon?: string
+    isTop?: boolean
 }
 
-const {title, href, path = href, target = "_self", icon = ""} = Astro.props
+const {
+    title,
+    href,
+    path = href,
+    target = "_self",
+    icon = "",
+    isTop = true,
+} = Astro.props
 
 const isExternal = url.host !== Astro.url.host
 const isActive: boolean = pathname === path
@@ -21,24 +29,18 @@ const isActive: boolean = pathname === path
 
 <a
     href={href}
-    class={isActive
-        ? siteData.colors.activeMenuClass
-        : siteData.colors.inactiveMenuClass}
+    title={title}
     aria-current={isActive ? "page" : null}
     rel={isExternal ? "noopener" : null}
-    target={target}>
-    {
-        icon !== "" && (
-            <Icon
-                name={icon}
-                class={
-                    isActive
-                        ? siteData.colors.activeMenuIconClass
-                        : siteData.colors.inactiveMenuIconClass
-                }
-            />
-        )
-    }
-
-    {title}</a
->
+    target={target}
+    class={isActive
+        ? isTop
+            ? siteData.colors.activeTopMenuClass
+            : siteData.colors.activeBottomMenuClass
+        : isTop
+          ? siteData.colors.inactiveTopMenuClass
+          : siteData.colors.inactiveBottomMenuClass}
+    role="button">
+    {icon !== "" && <Icon name={icon} class="mr-1" />}
+    {title}
+</a>
