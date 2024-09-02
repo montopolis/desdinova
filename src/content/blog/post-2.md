@@ -4,7 +4,7 @@ publishedDate: 2024-08-01T12:00:00
 category: info
 excerpt: "test 2"
 draft: true
-image: "/src/assets/images/blog/blog-post-heroimage2.png"
+image: "/src/assets/images/blog/examples/blog-post-heroimage2.png"
 ---
 
 # Exploring Markdown: A Comprehensive Guide

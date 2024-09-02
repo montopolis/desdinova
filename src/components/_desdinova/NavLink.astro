@@ -1,5 +1,5 @@
 ---
-import siteData from "../../config/siteData"
+import desdinovaConfig from "../../config/desdinova-config"
 import {Icon} from "astro-icon/components"
 
 const pathname = new URL(Astro.request.url).pathname
@@ -35,12 +35,13 @@ const isActive: boolean = pathname === path
     target={target}
     class={isActive
         ? isTop
-            ? siteData.colors.activeTopMenuClass
-            : siteData.colors.activeBottomMenuClass
+            ? desdinovaConfig.colors.activeTopMenuClass
+            : desdinovaConfig.colors.activeBottomMenuClass
         : isTop
-          ? siteData.colors.inactiveTopMenuClass
-          : siteData.colors.inactiveBottomMenuClass}
+          ? desdinovaConfig.colors.inactiveTopMenuClass
+          : desdinovaConfig.colors.inactiveBottomMenuClass}
     role="button">
     {icon !== "" && <Icon name={icon} class="mr-1" />}
     {title}
+    {isExternal && <Icon name="tabler:external-link" class="ml-1" />}
 </a>

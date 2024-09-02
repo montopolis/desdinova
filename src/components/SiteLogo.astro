@@ -1,7 +1,7 @@
 ---
 import {Picture} from "astro:assets"
 // import Logo from "/src/assets/images/logo.png"
-import siteData from "../config/siteData"
+import desdinovaConfig from "../config/desdinova-config"
 import LogoSquare from "/src/assets/images/logo-square.png"
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const url = new URL(Astro.url)
-const {loading = "lazy", alt = siteData.name} = Astro.props
+const {loading = "lazy", alt = desdinovaConfig.name} = Astro.props
 ---
 
 <a href={url.origin}>
@@ -26,7 +26,7 @@ const {loading = "lazy", alt = siteData.name} = Astro.props
     />
     <span
         class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
-        >{siteData.name}</span
+        >{desdinovaConfig.name}</span
     >
 
     <!--Full Logo-->
@@ -36,6 +36,6 @@ const {loading = "lazy", alt = siteData.name} = Astro.props
     <!--    width="175"-->
     <!--    loading={loading}-->
     <!--    class="mr-3"-->
-    <!--    alt={siteData.name}-->
+    <!--    alt={desdinovaConfig.name}-->
     <!--/>-->
 </a>

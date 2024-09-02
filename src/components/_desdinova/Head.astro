@@ -3,14 +3,14 @@ import {ViewTransitions} from "astro:transitions"
 
 import {AstroSeo} from "@astrolib/seo"
 import Analytics from "../Analytics.astro"
-import siteData from "../../config/siteData"
+import desdinovaConfig from "../../config/desdinova-config"
 import Fonts from "../Fonts.astro"
 import Favicon from "../Favicon.astro"
 const {pageTitle, pageDescription, canonical} = Astro.props
 const presentablePageTitle = pageTitle ? " / " + pageTitle : ""
 const presentablePageDescription = pageDescription
     ? pageDescription
-    : siteData.description
+    : desdinovaConfig.description
 ---
 
 <head>
@@ -23,7 +23,7 @@ const presentablePageDescription = pageDescription
     <Favicon />
     <Fonts />
 
-    <title>{siteData.name}{presentablePageTitle}</title>
+    <title>{desdinovaConfig.name}{presentablePageTitle}</title>
     <AstroSeo description={presentablePageDescription} canonical={canonical} />
 
     <Analytics />

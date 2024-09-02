@@ -1,24 +1,18 @@
 {
     "name": "desdinova",
-    "type": "module",
     "version": "0.3.0",
+    "type": "module",
     "scripts": {
-        "dev": "astro dev",
-        "start": "astro dev",
-        "check": "astro check",
-        "build": "astro check && astro build",
-        "preview": "astro preview",
         "astro": "astro",
+        "build": "astro check && astro build",
+        "changelog": "npx auto-changelog --hide-credit -t keepachangelog --sort-commits date-desc",
+        "check": "astro check",
+        "dev": "astro dev",
         "prettier": "npx prettier --write --list-different .",
+        "preview": "astro preview",
         "release": "npm run astro check && npm run prettier && npx release-it",
-        "changelog": "npx auto-changelog --hide-credit -t keepachangelog --sort-commits date-desc"
-    },
-    "auto-changelog": {
-        "output": "CHANGELOG.md",
-        "template": "keepachangelog",
-        "sort-commits": "date-desc",
-        "unreleased": true,
-        "commitLimit": false
+        "start": "astro dev",
+        "upgrade": "npx @astrojs/upgrade"
     },
     "dependencies": {
         "@astrojs/check": "^0.9.3",
@@ -52,5 +46,12 @@
     },
     "optionalDependencies": {
         "@rollup/rollup-linux-x64-gnu": "4.9.5"
+    },
+    "auto-changelog": {
+        "output": "CHANGELOG.md",
+        "template": "keepachangelog",
+        "sort-commits": "date-desc",
+        "unreleased": true,
+        "commitLimit": false
     }
 }

@@ -4,10 +4,10 @@ import mdx from "@astrojs/mdx"
 import sitemap from "@astrojs/sitemap"
 import icon from "astro-icon"
 import pagefind from "astro-pagefind"
-import siteData from "./src/config/siteData"
+import desdinovaConfig from "./src/config/desdinova-config.ts"
 
 export default defineConfig({
-    site: siteData.url,
+    site: desdinovaConfig.url,
     trailingSlash: "never",
     build: {
         format: "file",

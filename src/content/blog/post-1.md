@@ -6,7 +6,7 @@ category: info
 slug: the-first
 draft: true
 excerpt: "this is a short excerpt of the blog post"
-image: "/src/assets/images/blog/blog-post-heroimage1.png"
+image: "/src/assets/images/blog/examples/blog-post-heroimage1.png"
 tags:
     - release
 ---

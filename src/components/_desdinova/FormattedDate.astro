@@ -1,5 +1,5 @@
 ---
-import siteData from "../../config/siteData"
+import desdinovaConfig from "../../config/desdinova-config"
 interface Props {
     date: Date
 }
@@ -9,7 +9,7 @@ const {date} = Astro.props
 
 <time>
     {
-        new Intl.DateTimeFormat(siteData.localeDateString, {
+        new Intl.DateTimeFormat(desdinovaConfig.localeDateString, {
             year: "numeric",
             month: "short",
             day: "numeric",

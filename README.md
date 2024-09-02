@@ -60,7 +60,7 @@
 
 ### do basic configuration
 
-1. Update `src/config/siteData.ts` values under **UPDATE BELOW FIRST**
+1. Update `src/config/desdinova-config.ts` values under **UPDATE BELOW FIRST**
 2. Update the Logo [see below](#updating-the-logo)
 3. Update the Favicon [see below](#updating-the-favicon)
 4. Update the Font (if necessary [see below](#updating-the-font))
@@ -205,7 +205,7 @@ Use [RealFaviconGenerator](https://realfavicongenerator.net/svg-favicon/)
 
 ## Change Blog Posts Sort Order
 
--   see notes in `src/scripts/util.ts`
+-   see notes in `src/scripts/_desdinova-scripts.ts`
 
 ## Draft Blog Posts
 

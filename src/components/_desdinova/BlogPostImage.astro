@@ -11,19 +11,20 @@ interface Props {
 
 let {imagePath, altText, width = 512, height = 512} = Astro.props
 const images = import.meta.glob<{default: ImageMetadata}>(
-    "/src/assets/images/blog/*.{jpeg,jpg,png,gif}",
+    "/src/assets/images/**/*.{jpeg,jpg,png,gif}",
 )
 if (imagePath == undefined) {
     imagePath = "/src/assets/images/blog/blog-post-fallback-image.png"
 }
 if (!images[imagePath])
     throw new Error(
-        `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+        `"${imagePath}" does not exist in glob: "/src/assets/images/**/*.{jpeg,jpg,png,gif}"`,
     )
 ---
 
 <Picture
     src={images[imagePath]()}
+    class="rounded-xl"
     densities={[1.5, 2]}
     width={width}
     height={height}

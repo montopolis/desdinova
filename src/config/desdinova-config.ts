@@ -29,7 +29,7 @@ export interface SiteDataProps {
     }
 }
 // Update this file with your site specific information
-const siteData: SiteDataProps = {
+const desdinovaConfig: SiteDataProps = {
     ////////////////////////////////////////
     // UPDATE BELOW FIRST
     ////////////////////////////////////////
@@ -82,4 +82,4 @@ const siteData: SiteDataProps = {
     },
 }
 
-export default siteData
+export default desdinovaConfig

@@ -4,11 +4,11 @@ import Layout from "./Layout.astro"
 const {frontmatter} = Astro.props
 ---
 
-<Layout pageTitle={frontmatter.title}>
+<Layout pageTitle={frontmatter.title} pageDescription={frontmatter.description}>
     <article
         class="format lg:format-lg dark:format-invert mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <h1
-            class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-5xl dark:text-white">
+            class="mb-4 text-3xl font-bold leading-tight text-gray-900 lg:mb-6 lg:text-5xl dark:text-white">
             {frontmatter.title}
         </h1>
         <div class="prose prose-lg max-w-none font-serif dark:prose-invert">

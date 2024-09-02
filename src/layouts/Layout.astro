@@ -1,9 +1,9 @@
 ---
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
-import Head from "../components/_core/Head.astro"
-import Foot from "../components/_core/Foot.astro"
-import siteData from "../config/siteData"
+import Head from "../components/_desdinova/Head.astro"
+import Foot from "../components/_desdinova/Foot.astro"
+import desdinovaConfig from "../config/desdinova-config"
 const {pageTitle, pageDescription, canonical} = Astro.props
 ---
 
@@ -15,7 +15,7 @@ const {pageTitle, pageDescription, canonical} = Astro.props
         canonical={canonical}
     />
 
-    <body class={siteData.colors.mainBackground}>
+    <body class={desdinovaConfig.colors.mainBackground}>
         <Header />
         <slot />
         <Footer />

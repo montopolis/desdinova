@@ -1,13 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import siteData from "../config/siteData"
+import desdinovaConfig from "../config/desdinova-config"
 
 import Announcement from "../components/Announcement.astro"
 import Desdinova from "./examples/desdinova.astro"
 ---
 
 <Layout pageTitle="Home">
-    <section class={siteData.colors.mainBackground}>
+    <section class={desdinovaConfig.colors.mainBackground}>
         <Announcement />
         <Desdinova />
     </section>
