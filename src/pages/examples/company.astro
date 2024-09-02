@@ -1,11 +1,11 @@
 ---
 import {Image} from "astro:assets"
-import Layout from "../layouts/Layout.astro"
+import Layout from "../../layouts/Layout.astro"
 
 import {Icon} from "astro-icon/components"
-import PhoneImage from "../assets/images/samples/phone-mockup.png"
-import NewsletterSignup from "../components/NewsletterSignup.astro"
-import siteData from "../config/siteData"
+import PhoneImage from "../../assets/images/samples/phone-mockup.png"
+import NewsletterSignup from "../../components/NewsletterSignup.astro"
+import siteData from "../../config/siteData"
 ---
 
 <Layout pageTitle="Company" pageDescription="All about the Company">
@@ -24,13 +24,13 @@ import siteData from "../config/siteData"
                     stack.
                 </p>
                 <a
-                    href="/GetStarted"
+                    href="/examples/getstarted"
                     class="mr-3 inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                     Get started
                     <Icon name="tabler:arrow-right" class="ml-1 h-5 w-5" />
                 </a>
                 <a
-                    href="/Contact"
+                    href="/examples/contact"
                     class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                     Speak to Sales
                 </a>
