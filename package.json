@@ -45,9 +45,6 @@
         "prettier-plugin-astro": "^0.14.1",
         "prettier-plugin-tailwindcss": "^0.6.6"
     },
-    "optionalDependencies": {
-        "@rollup/rollup-linux-x64-gnu": "4.9.5"
-    },
     "auto-changelog": {
         "output": "CHANGELOG.md",
         "template": "keepachangelog",
