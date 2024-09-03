@@ -13,29 +13,31 @@ const url = new URL(Astro.url)
 const {loading = "lazy", alt = desdinovaConfig.name} = Astro.props
 ---
 
-<a href={url.origin}>
-    <!--Square Logo with Text Site Title-->
-    <Picture
-        src={LogoSquare}
-        densities={[1.5, 2]}
-        loading={loading}
-        class="mr-3"
-        height="64"
-        width="64"
-        alt={alt}
-    />
-    <span
-        class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
-        >{desdinovaConfig.name}</span
-    >
+<div id="logo" class="inline items-center text-left">
+    <a href={url.origin}>
+        <!--Square Logo with Text Site Title-->
+        <Picture
+            src={LogoSquare}
+            densities={[1.5, 2]}
+            loading={loading}
+            class="mr-3 inline"
+            height="64"
+            width="64"
+            alt={alt}
+        />
+        <span
+            class="whitespace-nowrap text-left align-middle text-xl font-semibold dark:text-white"
+            >{desdinovaConfig.name}</span
+        >
 
-    <!--Full Logo-->
-    <!--<Picture-->
-    <!--    src={Logo}-->
-    <!--    densities={[1.5, 2]}-->
-    <!--    width="175"-->
-    <!--    loading={loading}-->
-    <!--    class="mr-3"-->
-    <!--    alt={desdinovaConfig.name}-->
-    <!--/>-->
-</a>
+        <!--Full Logo-->
+        <!--<Picture-->
+        <!--    src={Logo}-->
+        <!--    densities={[1.5, 2]}-->
+        <!--    width="175"-->
+        <!--    loading={loading}-->
+        <!--    class="mr-3"-->
+        <!--    alt={desdinovaConfig.name}-->
+        <!--/>-->
+    </a>
+</div>
