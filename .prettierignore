@@ -1,3 +1,4 @@
 **/dist
+/.github/workflows/astro.yml
 src/pages/privacy.mdx
 CHANGELOG.md
