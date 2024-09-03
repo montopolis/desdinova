@@ -76,9 +76,9 @@ const desdinovaConfig: SiteDataProps = {
             "inline-flex w-full shrink-0 items-center justify-center text-center py-2 pl-3 pr-4 hover:bg-gray-100 hover:text-primary-700 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent text-gray-500 dark:text-gray-400",
         // tailwind classes for bottom menu items
         activeBottomMenuClass:
-            "flex text-primary-700 dark:text-primary-400 hover:underline",
+            "inline-flex shrink-0 text-primary-700 dark:text-primary-400 hover:underline",
         inactiveBottomMenuClass:
-            "hover:underline lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent text-gray-500 dark:text-gray-400",
+            "inline-flex shrink-0 hover:underline lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:text-white dark:hover:bg-gray-800 dark:hover:text-white lg:dark:hover:bg-transparent text-gray-500 dark:text-gray-400",
     },
 }
 
