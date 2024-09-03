@@ -2,6 +2,7 @@ export interface SiteDataProps {
     url: string
     name: string
     description: string
+    copyrightYearStart: string
 
     company: string
     companyUrl: string
@@ -40,6 +41,7 @@ const desdinovaConfig: SiteDataProps = {
     name: "Desdinova",
     // your website description, which is also default SEO text
     description: "Built using Desdinova in Astro",
+    copyrightYearStart: "2023",
 
     // company/organization & url for responsible party (see Footer & Privacy)
     company: "A Company",
