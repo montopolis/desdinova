@@ -7,9 +7,16 @@ interface Props {
     altText: string
     width?: number
     height?: number
+    loading?: "eager" | "lazy" | null
 }
 
-let {imagePath, altText, width = 512, height = 512} = Astro.props
+let {
+    imagePath,
+    altText,
+    width = 512,
+    height = 512,
+    loading = "eager",
+} = Astro.props
 const images = import.meta.glob<{default: ImageMetadata}>(
     "/src/assets/images/**/*.{jpeg,jpg,png,gif}",
 )
@@ -29,5 +36,5 @@ if (!images[imagePath])
     width={width}
     height={height}
     alt={altText}
-    loading="eager"
+    loading={loading}
 />

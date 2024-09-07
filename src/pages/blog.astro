@@ -26,6 +26,7 @@ const posts = getPublishedAndSortedPosts(await getCollection("blog"))
                                     <BlogPostImage
                                         imagePath={posts.data.image}
                                         altText={`${posts.data.title}`}
+                                        loading="lazy"
                                     />
                                 </a>
                             </div>
