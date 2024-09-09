@@ -1,15 +1,14 @@
 ---
-import SiteLogo from "./SiteLogo.astro"
-import TopMenu from "./TopMenu.astro"
-import desdinovaConfig from "../config/desdinova-config"
+import SiteLogo from './SiteLogo.astro';
+import TopMenu from './TopMenu.astro';
+import desdinovaConfig from '../config/desdinova-config';
 ---
 
 <header class={desdinovaConfig.colors.mainBackground}>
-    <nav class="border-gray-200 px-4 py-2.5 lg:px-6">
-        <div
-            class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
-            <SiteLogo loading="eager" alt={desdinovaConfig.name + " top"} />
-            <TopMenu />
-        </div>
-    </nav>
+	<nav class="border-gray-200 px-4 py-2.5 lg:px-6">
+		<div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
+			<SiteLogo loading="eager" alt={desdinovaConfig.name + ' top'} />
+			<TopMenu />
+		</div>
+	</nav>
 </header>

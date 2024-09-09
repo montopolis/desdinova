@@ -2,15 +2,12 @@
 
 ---
 
-<script
-    is:inline
-    src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"
-></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 
 <script is:inline>
-    // this is needed so flowbite js library works with view transitions
-    // TODO: https://astro.build/blog/future-of-astro-zero-js-view-transitions/
-    document.addEventListener("astro:after-swap", () => {
-        initFlowbite()
-    })
+	// this is needed so flowbite js library works with view transitions
+	// TODO: https://astro.build/blog/future-of-astro-zero-js-view-transitions/
+	document.addEventListener('astro:after-swap', () => {
+		initFlowbite();
+	});
 </script>

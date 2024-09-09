@@ -1,21 +1,18 @@
 ---
-import desdinovaConfig from "../config/desdinova-config"
-const year = new Date().getFullYear()
+import desdinovaConfig from '../config/desdinova-config';
+const year = new Date().getFullYear();
 
 const yearSpan = desdinovaConfig.copyrightYearStart
-    ? desdinovaConfig.copyrightYearStart != String(year)
-        ? desdinovaConfig.copyrightYearStart + "-" + year
-        : String(year)
-    : year
+	? desdinovaConfig.copyrightYearStart != String(year)
+		? desdinovaConfig.copyrightYearStart + '-' + year
+		: String(year)
+	: year;
 
-console.log(yearSpan)
+console.log(yearSpan);
 ---
 
 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-    >&copy; {yearSpan}
-    <b
-        ><a href={desdinovaConfig.companyUrl} class="hover:underline"
-            >{desdinovaConfig.company}</a
-        ></b
-    ></span
+	>&copy; {yearSpan}
+	<b><a href={desdinovaConfig.companyUrl} class="hover:underline">{desdinovaConfig.company}</a></b
+	></span
 >

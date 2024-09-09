@@ -1,99 +1,101 @@
 ---
-import {Icon} from "astro-icon/components"
-import {Image} from "astro:assets"
-import {YouTube} from "astro-embed"
-import Layout from "../../layouts/Layout.astro"
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import { YouTube } from 'astro-embed';
+import Layout from '../../layouts/Layout.astro';
 
-import OfficeImage1 from "../../assets/images/examples/office-long-1.png"
-import OfficeImage2 from "../../assets/images/examples/office-long-2.png"
-import HeroImage3 from "../../assets/images/blog/examples/blog-post-heroimage3.png"
-import desdinovaConfig from "../../config/desdinova-config"
+import OfficeImage1 from '../../assets/images/examples/office-long-1.png';
+import OfficeImage2 from '../../assets/images/examples/office-long-2.png';
+import HeroImage3 from '../../assets/images/blog/examples/blog-post-heroimage3.png';
+import desdinovaConfig from '../../config/desdinova-config';
 ---
 
 <Layout pageTitle="Get Started" pageDescription="Getting Started">
-    <section class={desdinovaConfig.colors.mainBackground}>
-        <div
-            class="mx-auto max-w-screen-xl items-center gap-16 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
-            <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                <h2
-                    class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-                    We didn't reinvent the wheel
-                </h2>
-                <p class="mb-4">
-                    We are strategists, designers and developers. Innovators and
-                    problem solvers. Small enough to be simple and quick, but
-                    big enough to deliver the scope you want at the pace you
-                    need. Small enough to be simple and quick, but big enough to
-                    deliver the scope you want at the pace you need.
-                </p>
-                <p>
-                    We are strategists, designers and developers. Innovators and
-                    problem solvers. Small enough to be simple and quick.
-                </p>
-            </div>
-            <div class="mt-8 grid grid-cols-2 gap-4">
-                <Image
-                    class="w-full rounded-lg"
-                    src={OfficeImage1}
-                    alt="office content 1"
-                />
-                <Image
-                    class="mt-4 w-full rounded-lg lg:mt-10"
-                    src={OfficeImage2}
-                    alt="office content 2"
-                />
-            </div>
-        </div>
-    </section>
+	<section class={desdinovaConfig.colors.mainBackground}>
+		<div
+			class="mx-auto max-w-screen-xl items-center gap-16 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16"
+		>
+			<div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+				<h2
+					class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+				>
+					We didn't reinvent the wheel
+				</h2>
+				<p class="mb-4">
+					We are strategists, designers and developers. Innovators and problem solvers.
+					Small enough to be simple and quick, but big enough to deliver the scope you
+					want at the pace you need. Small enough to be simple and quick, but big enough
+					to deliver the scope you want at the pace you need.
+				</p>
+				<p>
+					We are strategists, designers and developers. Innovators and problem solvers.
+					Small enough to be simple and quick.
+				</p>
+			</div>
+			<div class="mt-8 grid grid-cols-2 gap-4">
+				<Image class="w-full rounded-lg" src={OfficeImage1} alt="office content 1" />
+				<Image
+					class="mt-4 w-full rounded-lg lg:mt-10"
+					src={OfficeImage2}
+					alt="office content 2"
+				/>
+			</div>
+		</div>
+	</section>
 
-    <section>
-        <div
-            class="mx-auto max-w-screen-xl items-center gap-16 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
-            <div
-                class="flex flex-col items-center rounded-lg bg-white md:max-w-xl md:flex-row dark:bg-gray-800">
-                <Image
-                    class="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                    src={HeroImage3}
-                    alt="hero image 3"
-                />
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5
-                        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Modified Flowbite Default Card
-                    </h5>
-                    <p
-                        class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        <a class="hover:text-white" href="#"
-                            >See more Card options on Flowbite
-                            <Icon name="tabler:external-link" class="inline" />
-                        </a>
-                    </p>
-                </div>
-            </div>
+	<section>
+		<div
+			class="mx-auto max-w-screen-xl items-center gap-16 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16"
+		>
+			<div
+				class="flex flex-col items-center rounded-lg bg-white md:max-w-xl md:flex-row dark:bg-gray-800"
+			>
+				<Image
+					class="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+					src={HeroImage3}
+					alt="hero image 3"
+				/>
+				<div class="flex flex-col justify-between p-4 leading-normal">
+					<h5
+						class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+					>
+						Modified Flowbite Default Card
+					</h5>
+					<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+						<a class="hover:text-white" href="#"
+							>See more Card options on Flowbite
+							<Icon name="tabler:external-link" class="inline" />
+						</a>
+					</p>
+				</div>
+			</div>
 
-            <div
-                class="max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800">
-                <a href="#">
-                    <h5
-                        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Modified Flowbite Card with Button
-                    </h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order.
-                </p>
-                <a
-                    href="#"
-                    class="inline-flex items-center rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Read more
-                    <Icon name="tabler:arrow-right" class="ml-2 h-5 w-5" />
-                </a>
-            </div>
-        </div>
-    </section>
+			<div
+				class="max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800"
+			>
+				<a href="#">
+					<h5
+						class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+					>
+						Modified Flowbite Card with Button
+					</h5>
+				</a>
+				<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+					Here are the biggest enterprise technology acquisitions of 2021 so far, in
+					reverse chronological order.
+				</p>
+				<a
+					href="#"
+					class="inline-flex items-center rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+				>
+					Read more
+					<Icon name="tabler:arrow-right" class="ml-2 h-5 w-5" />
+				</a>
+			</div>
+		</div>
+	</section>
 
-    <section class="bg-white pb-10 dark:bg-gray-800">
-        <YouTube class="mx-auto" id="https://youtu.be/xtTy5nKay_Y" />
-    </section>
+	<section class="bg-white pb-10 dark:bg-gray-800">
+		<YouTube class="mx-auto" id="https://youtu.be/xtTy5nKay_Y" />
+	</section>
 </Layout>

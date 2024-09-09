@@ -1,12 +1,12 @@
 ---
-title: "My First Blog Post"
+title: 'My First Blog Post'
 publishedDate: 2024-07-01T12:00:00
 updatedDate: 2024-07-15T12:00:00
 category: info
 slug: the-first
 draft: true
-excerpt: "this is a short excerpt of the blog post"
-image: "/src/assets/images/blog/examples/blog-post-heroimage1.png"
+excerpt: 'this is a short excerpt of the blog post'
+image: '/src/assets/images/blog/examples/blog-post-heroimage1.png'
 tags:
     - release
 ---
@@ -41,7 +41,7 @@ Welcome to my _new blog_
 
 ## Another Heading
 
-This is [an example](http://example.com/ "Title") inline link.
+This is [an example](http://example.com/ 'Title') inline link.
 
 ### What's next
 

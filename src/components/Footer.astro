@@ -1,38 +1,32 @@
 ---
-import Socials from "./Socials.astro"
-import SiteLogo from "./SiteLogo.astro"
-import BottomMenu from "./BottomMenu.astro"
-import Copyright from "./Copyright.astro"
-import desdinovaConfig from "../config/desdinova-config"
+import Socials from './Socials.astro';
+import SiteLogo from './SiteLogo.astro';
+import BottomMenu from './BottomMenu.astro';
+import Copyright from './Copyright.astro';
+import desdinovaConfig from '../config/desdinova-config';
 ---
 
 <footer class="p-4 md:p-8 lg:p-10">
-    <div class={desdinovaConfig.colors.mainBackground}>
-        <div class="mx-auto max-w-screen-xl text-center">
-            <div class="mb-3 flex items-center justify-center">
-                <SiteLogo
-                    loading="eager"
-                    alt={desdinovaConfig.name + " bottom"}
-                />
-            </div>
-            <p class="my-6 text-gray-500 dark:text-gray-400">
-                {desdinovaConfig.name} v0.4.0
-            </p>
-            <BottomMenu />
-            <hr
-                class="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700"
-            />
-            <div class="container mx-auto pb-8">
-                <div
-                    class="flex flex-col items-center md:flex-row md:justify-between">
-                    <div>
-                        <Copyright />
-                    </div>
-                    <div class="pt-2 sm:pt-2 md:pt-0">
-                        <Socials />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class={desdinovaConfig.colors.mainBackground}>
+		<div class="mx-auto max-w-screen-xl text-center">
+			<div class="mb-3 flex items-center justify-center">
+				<SiteLogo loading="eager" alt={desdinovaConfig.name + ' bottom'} />
+			</div>
+			<p class="my-6 text-gray-500 dark:text-gray-400">
+				{desdinovaConfig.name} v0.4.0
+			</p>
+			<BottomMenu />
+			<hr class="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
+			<div class="container mx-auto pb-8">
+				<div class="flex flex-col items-center md:flex-row md:justify-between">
+					<div>
+						<Copyright />
+					</div>
+					<div class="pt-2 sm:pt-2 md:pt-0">
+						<Socials />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>

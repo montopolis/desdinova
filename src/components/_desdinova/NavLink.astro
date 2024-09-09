@@ -1,47 +1,41 @@
 ---
-import desdinovaConfig from "../../config/desdinova-config"
-import {Icon} from "astro-icon/components"
+import desdinovaConfig from '../../config/desdinova-config';
+import { Icon } from 'astro-icon/components';
 
-const pathname = new URL(Astro.request.url).pathname
-const url = new URL(Astro.props.href, Astro.url)
+const pathname = new URL(Astro.request.url).pathname;
+const url = new URL(Astro.props.href, Astro.url);
 
 interface Props {
-    title: string
-    href: string
-    path?: string
-    target?: string
-    icon?: string
-    isTop?: boolean
+	title: string;
+	href: string;
+	path?: string;
+	target?: string;
+	icon?: string;
+	isTop?: boolean;
 }
 
-const {
-    title,
-    href,
-    path = href,
-    target = "_self",
-    icon = "",
-    isTop = true,
-} = Astro.props
+const { title, href, path = href, target = '_self', icon = '', isTop = true } = Astro.props;
 
-const isExternal = url.host !== Astro.url.host
-const isActive: boolean = pathname === path
+const isExternal = url.host !== Astro.url.host;
+const isActive: boolean = pathname === path;
 ---
 
 <a
-    href={href}
-    title={title}
-    aria-current={isActive ? "page" : null}
-    rel={isExternal ? "noopener" : null}
-    target={target}
-    class={isActive
-        ? isTop
-            ? desdinovaConfig.colors.activeTopMenuClass
-            : desdinovaConfig.colors.activeBottomMenuClass
-        : isTop
-          ? desdinovaConfig.colors.inactiveTopMenuClass
-          : desdinovaConfig.colors.inactiveBottomMenuClass}
-    role="button">
-    {icon !== "" && <Icon name={icon} class="mr-1" />}
-    {title}
-    {isExternal && <Icon name="tabler:external-link" class="ml-1" />}
+	href={href}
+	title={title}
+	aria-current={isActive ? 'page' : null}
+	rel={isExternal ? 'noopener' : null}
+	target={target}
+	class={isActive
+		? isTop
+			? desdinovaConfig.colors.activeTopMenuClass
+			: desdinovaConfig.colors.activeBottomMenuClass
+		: isTop
+			? desdinovaConfig.colors.inactiveTopMenuClass
+			: desdinovaConfig.colors.inactiveBottomMenuClass}
+	role="button"
+>
+	{icon !== '' && <Icon name={icon} class="mr-1" />}
+	{title}
+	{isExternal && <Icon name="tabler:external-link" class="ml-1" />}
 </a>

@@ -1,23 +1,19 @@
 ---
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-import Head from "../components/_desdinova/Head.astro"
-import Foot from "../components/_desdinova/Foot.astro"
-import desdinovaConfig from "../config/desdinova-config"
-const {pageTitle, pageDescription, canonical} = Astro.props
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Head from '../components/_desdinova/Head.astro';
+import Foot from '../components/_desdinova/Foot.astro';
+import desdinovaConfig from '../config/desdinova-config';
+const { pageTitle, pageDescription, canonical } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-    <Head
-        pageTitle={pageTitle}
-        pageDescription={pageDescription}
-        canonical={canonical}
-    />
+	<Head pageTitle={pageTitle} pageDescription={pageDescription} canonical={canonical} />
 
-    <body class={desdinovaConfig.colors.mainBackground}>
-        <Header />
-        <slot />
-        <Footer />
-    </body><Foot />
+	<body class={desdinovaConfig.colors.mainBackground}>
+		<Header />
+		<slot />
+		<Footer />
+	</body><Foot />
 </html>

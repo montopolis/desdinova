@@ -1,43 +1,42 @@
 ---
-import {Picture} from "astro:assets"
+import { Picture } from 'astro:assets';
 // import Logo from "/src/assets/images/logo.png"
-import desdinovaConfig from "../config/desdinova-config"
-import LogoSquare from "/src/assets/images/logo-square.png"
+import desdinovaConfig from '../config/desdinova-config';
+import LogoSquare from '/src/assets/images/logo-square.png';
 
 interface Props {
-    loading?: "eager" | "lazy" | null
-    alt?: string
+	loading?: 'eager' | 'lazy' | null;
+	alt?: string;
 }
 
-const url = new URL(Astro.url)
-const {loading = "lazy", alt = desdinovaConfig.name} = Astro.props
+const url = new URL(Astro.url);
+const { loading = 'lazy', alt = desdinovaConfig.name } = Astro.props;
 ---
 
 <div id="logo" class="inline items-center text-left">
-    <a href={url.origin}>
-        <!--Square Logo with Text Site Title-->
-        <Picture
-            src={LogoSquare}
-            densities={[1.5, 2]}
-            loading={loading}
-            class="mr-3 inline"
-            height="64"
-            width="64"
-            alt={alt}
-        />
-        <span
-            class="whitespace-nowrap text-left align-middle text-xl font-semibold dark:text-white"
-            >{desdinovaConfig.name}</span
-        >
+	<a href={url.origin}>
+		<!--Square Logo with Text Site Title-->
+		<Picture
+			src={LogoSquare}
+			densities={[1.5, 2]}
+			loading={loading}
+			class="mr-3 inline"
+			height="64"
+			width="64"
+			alt={alt}
+		/>
+		<span class="whitespace-nowrap text-left align-middle text-xl font-semibold dark:text-white"
+			>{desdinovaConfig.name}</span
+		>
 
-        <!--Full Logo-->
-        <!--<Picture-->
-        <!--    src={Logo}-->
-        <!--    densities={[1.5, 2]}-->
-        <!--    width="175"-->
-        <!--    loading={loading}-->
-        <!--    class="mr-3"-->
-        <!--    alt={desdinovaConfig.name}-->
-        <!--/>-->
-    </a>
+		<!--Full Logo-->
+		<!--<Picture-->
+		<!--    src={Logo}-->
+		<!--    densities={[1.5, 2]}-->
+		<!--    width="175"-->
+		<!--    loading={loading}-->
+		<!--    class="mr-3"-->
+		<!--    alt={desdinovaConfig.name}-->
+		<!--/>-->
+	</a>
 </div>

@@ -1,86 +1,75 @@
 ---
-import {Icon} from "astro-icon/components"
-import desdinovaConfig from "../config/desdinova-config"
-import {getCollection} from "astro:content"
-import {getPublishedAndSortedPosts} from "../scripts/_desdinova-scripts"
+import { Icon } from 'astro-icon/components';
+import desdinovaConfig from '../config/desdinova-config';
+import { getCollection } from 'astro:content';
+import { getPublishedAndSortedPosts } from '../scripts/_desdinova-scripts';
 
-import Layout from "../layouts/Layout.astro"
-import FormattedDate from "../components/_desdinova/FormattedDate.astro"
-import BlogListHeader from "../components/BlogListHeader.astro"
-import BlogPostImage from "../components/_desdinova/BlogPostImage.astro"
+import Layout from '../layouts/Layout.astro';
+import FormattedDate from '../components/_desdinova/FormattedDate.astro';
+import BlogListHeader from '../components/BlogListHeader.astro';
+import BlogPostImage from '../components/_desdinova/BlogPostImage.astro';
 
 // Sort posts in descending order (newest to oldest)
-const posts = getPublishedAndSortedPosts(await getCollection("blog"))
+const posts = getPublishedAndSortedPosts(await getCollection('blog'));
 ---
 
 <Layout pageTitle="Blog" pageDescription="Blog">
-    <section class={desdinovaConfig.colors.mainBackground}>
-        <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
-            <BlogListHeader />
-            <div class="grid gap-8 lg:grid-cols-2">
-                {
-                    posts.map(posts => (
-                        <article class="rounded-lg border border-gray-200 bg-white p-6 shadow-md dark:border-gray-700 dark:bg-gray-800">
-                            <div class="mb-5">
-                                <a href={`/${posts.slug}`}>
-                                    <BlogPostImage
-                                        imagePath={posts.data.image}
-                                        altText={`${posts.data.title}`}
-                                        loading="lazy"
-                                    />
-                                </a>
-                            </div>
-                            <div class="mb-5 flex items-center justify-between text-base text-gray-500 dark:text-gray-400">
-                                <span class="inline-flex items-center rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-200 dark:text-primary-800">
-                                    <Icon
-                                        name="line-md:file-plus-filled"
-                                        class="mr-1 h-3 w-3"
-                                    />
-                                    {posts.data.category}
-                                </span>
-                                <span class="text-sm">
-                                    {posts.data.draft && (
-                                        <span class="me-2 rounded bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                                            Draft
-                                        </span>
-                                    )}
+	<section class={desdinovaConfig.colors.mainBackground}>
+		<div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+			<BlogListHeader />
+			<div class="grid gap-8 lg:grid-cols-2">
+				{
+					posts.map((posts) => (
+						<article class="rounded-lg border border-gray-200 bg-white p-6 shadow-md dark:border-gray-700 dark:bg-gray-800">
+							<div class="mb-5">
+								<a href={`/${posts.slug}`}>
+									<BlogPostImage
+										imagePath={posts.data.image}
+										altText={`${posts.data.title}`}
+										loading="lazy"
+									/>
+								</a>
+							</div>
+							<div class="mb-5 flex items-center justify-between text-base text-gray-500 dark:text-gray-400">
+								<span class="inline-flex items-center rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-200 dark:text-primary-800">
+									<Icon name="line-md:file-plus-filled" class="mr-1 h-3 w-3" />
+									{posts.data.category}
+								</span>
+								<span class="text-sm">
+									{posts.data.draft && (
+										<span class="me-2 rounded bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+											Draft
+										</span>
+									)}
 
-                                    <Icon
-                                        name="tabler:clock"
-                                        class="-mt-0.5 inline-block h-4 w-4 dark:text-gray-400"
-                                    />
-                                    <FormattedDate
-                                        date={posts.data.publishedDate}
-                                    />
-                                </span>
-                            </div>
-                            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                <a href={`/${posts.slug}`}>
-                                    {posts.data.title}
-                                </a>
-                            </h2>
-                            <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-                                {posts.data.excerpt}
-                            </p>
+									<Icon
+										name="tabler:clock"
+										class="-mt-0.5 inline-block h-4 w-4 dark:text-gray-400"
+									/>
+									<FormattedDate date={posts.data.publishedDate} />
+								</span>
+							</div>
+							<h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+								<a href={`/${posts.slug}`}>{posts.data.title}</a>
+							</h2>
+							<p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+								{posts.data.excerpt}
+							</p>
 
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center space-x-4">
-                                    &nbsp;
-                                </div>
-                                <a
-                                    href={`/${posts.slug}`}
-                                    class="mr-2 inline-flex items-center justify-center rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 lg:px-5 lg:py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                                    Read more
-                                    <Icon
-                                        name="tabler:arrow-right"
-                                        class="ml-2 h-5 w-5"
-                                    />
-                                </a>
-                            </div>
-                        </article>
-                    ))
-                }
-            </div>
-        </div>
-    </section>
+							<div class="flex items-center justify-between">
+								<div class="flex items-center space-x-4">&nbsp;</div>
+								<a
+									href={`/${posts.slug}`}
+									class="mr-2 inline-flex items-center justify-center rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 lg:px-5 lg:py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+								>
+									Read more
+									<Icon name="tabler:arrow-right" class="ml-2 h-5 w-5" />
+								</a>
+							</div>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
 </Layout>

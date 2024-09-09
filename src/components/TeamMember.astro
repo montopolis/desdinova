@@ -1,163 +1,169 @@
 ---
-import type {ImageMetadata} from "astro"
-import {Image} from "astro:assets"
-import {Icon} from "astro-icon/components"
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
-    name: string
-    imagePath: string
-    title: string
-    description: string
-    social1name?: string
-    social1url?: string
-    social1icon?: string
-    social2name?: string
-    social2url?: string
-    social2icon?: string
-    social3name?: string
-    social3url?: string
-    social3icon?: string
-    social4name?: string
-    social4url?: string
-    social4icon?: string
-    social5name?: string
-    social5url?: string
-    social5icon?: string
-    social6name?: string
-    social6url?: string
-    social6icon?: string
+	name: string;
+	imagePath: string;
+	title: string;
+	description: string;
+	social1name?: string;
+	social1url?: string;
+	social1icon?: string;
+	social2name?: string;
+	social2url?: string;
+	social2icon?: string;
+	social3name?: string;
+	social3url?: string;
+	social3icon?: string;
+	social4name?: string;
+	social4url?: string;
+	social4icon?: string;
+	social5name?: string;
+	social5url?: string;
+	social5icon?: string;
+	social6name?: string;
+	social6url?: string;
+	social6icon?: string;
 }
 
 let {
-    name,
-    imagePath,
-    title,
-    description,
-    social1name = "",
-    social1url = "",
-    social1icon = "",
-    social2name = "",
-    social2url = "",
-    social2icon = "",
-    social3name = "",
-    social3url = "",
-    social3icon = "",
-    social4name = "",
-    social4url = "",
-    social4icon = "",
-    social5name = "",
-    social5url = "",
-    social5icon = "",
-    social6name = "",
-    social6url = "",
-    social6icon = "",
-} = Astro.props
+	name,
+	imagePath,
+	title,
+	description,
+	social1name = '',
+	social1url = '',
+	social1icon = '',
+	social2name = '',
+	social2url = '',
+	social2icon = '',
+	social3name = '',
+	social3url = '',
+	social3icon = '',
+	social4name = '',
+	social4url = '',
+	social4icon = '',
+	social5name = '',
+	social5url = '',
+	social5icon = '',
+	social6name = '',
+	social6url = '',
+	social6icon = '',
+} = Astro.props;
 
-const images = import.meta.glob<{default: ImageMetadata}>(
-    "/src/assets/images/**/*.{jpeg,jpg,png,gif}",
-)
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	'/src/assets/images/**/*.{jpeg,jpg,png,gif}',
+);
 if (imagePath == undefined) {
-    imagePath = "/src/assets/images/team/team-fallback-image.png"
+	imagePath = '/src/assets/images/team/team-fallback-image.png';
 }
 if (!images[imagePath])
-    throw new Error(
-        `"${imagePath}" does not exist in glob: "/src/assets/images/**/*.{jpeg,jpg,png,gif}"`,
-    )
+	throw new Error(
+		`"${imagePath}" does not exist in glob: "/src/assets/images/**/*.{jpeg,jpg,png,gif}"`,
+	);
 ---
 
 <div
-    class="items-center rounded-lg bg-gray-50 shadow sm:flex dark:border-gray-700 dark:bg-gray-800">
-    <a href="#">
-        <Image
-            class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg lg:w-52"
-            src={images[imagePath]()}
-            loading="eager"
-            alt={name}
-        />
-    </a>
-    <div class="p-5">
-        <h3
-            class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <a href="#">{name}</a>
-        </h3>
-        <span class="text-gray-500 dark:text-gray-400">{title}</span>
-        <p class="mb-4 mt-3 font-light text-gray-500 dark:text-gray-400">
-            {description}
-        </p>
-        <!--Social Media Links-->
-        <ul class="flex space-x-4 sm:mt-0">
-            {
-                social1url !== "" && (
-                    <li>
-                        <a
-                            href={social1url}
-                            aria-label={social1name}
-                            class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                            <Icon name={social1icon} class="h-5 w-5" />
-                        </a>
-                    </li>
-                )
-            }
-            {
-                social2url !== "" && (
-                    <li>
-                        <a
-                            href={social2url}
-                            aria-label={social2name}
-                            class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                            <Icon name={social2icon} class="h-5 w-5" />
-                        </a>
-                    </li>
-                )
-            }
-            {
-                social3url !== "" && (
-                    <li>
-                        <a
-                            href={social3url}
-                            aria-label={social3name}
-                            class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                            <Icon name={social3icon} class="h-5 w-5" />
-                        </a>
-                    </li>
-                )
-            }
-            {
-                social4url !== "" && (
-                    <li>
-                        <a
-                            href={social4url}
-                            aria-label={social4name}
-                            class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                            <Icon name={social4icon} class="h-5 w-5" />
-                        </a>
-                    </li>
-                )
-            }
-            {
-                social5url !== "" && (
-                    <li>
-                        <a
-                            href={social5url}
-                            aria-label={social5name}
-                            class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                            <Icon name={social5icon} class="h-5 w-5" />
-                        </a>
-                    </li>
-                )
-            }
-            {
-                social6url !== "" && (
-                    <li>
-                        <a
-                            href={social6url}
-                            aria-label={social6name}
-                            class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                            <Icon name={social6icon} class="h-5 w-5" />
-                        </a>
-                    </li>
-                )
-            }
-        </ul>
-    </div>
+	class="items-center rounded-lg bg-gray-50 shadow sm:flex dark:border-gray-700 dark:bg-gray-800"
+>
+	<a href="#">
+		<Image
+			class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg lg:w-52"
+			src={images[imagePath]()}
+			loading="eager"
+			alt={name}
+		/>
+	</a>
+	<div class="p-5">
+		<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+			<a href="#">{name}</a>
+		</h3>
+		<span class="text-gray-500 dark:text-gray-400">{title}</span>
+		<p class="mb-4 mt-3 font-light text-gray-500 dark:text-gray-400">
+			{description}
+		</p>
+		<!--Social Media Links-->
+		<ul class="flex space-x-4 sm:mt-0">
+			{
+				social1url !== '' && (
+					<li>
+						<a
+							href={social1url}
+							aria-label={social1name}
+							class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+						>
+							<Icon name={social1icon} class="h-5 w-5" />
+						</a>
+					</li>
+				)
+			}
+			{
+				social2url !== '' && (
+					<li>
+						<a
+							href={social2url}
+							aria-label={social2name}
+							class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+						>
+							<Icon name={social2icon} class="h-5 w-5" />
+						</a>
+					</li>
+				)
+			}
+			{
+				social3url !== '' && (
+					<li>
+						<a
+							href={social3url}
+							aria-label={social3name}
+							class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+						>
+							<Icon name={social3icon} class="h-5 w-5" />
+						</a>
+					</li>
+				)
+			}
+			{
+				social4url !== '' && (
+					<li>
+						<a
+							href={social4url}
+							aria-label={social4name}
+							class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+						>
+							<Icon name={social4icon} class="h-5 w-5" />
+						</a>
+					</li>
+				)
+			}
+			{
+				social5url !== '' && (
+					<li>
+						<a
+							href={social5url}
+							aria-label={social5name}
+							class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+						>
+							<Icon name={social5icon} class="h-5 w-5" />
+						</a>
+					</li>
+				)
+			}
+			{
+				social6url !== '' && (
+					<li>
+						<a
+							href={social6url}
+							aria-label={social6name}
+							class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+						>
+							<Icon name={social6icon} class="h-5 w-5" />
+						</a>
+					</li>
+				)
+			}
+		</ul>
+	</div>
 </div>

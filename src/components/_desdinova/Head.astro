@@ -1,62 +1,57 @@
 ---
-import {ViewTransitions} from "astro:transitions"
+import { ViewTransitions } from 'astro:transitions';
 
-import {AstroSeo} from "@astrolib/seo"
-import Analytics from "../Analytics.astro"
-import desdinovaConfig from "../../config/desdinova-config"
-import Fonts from "../Fonts.astro"
-import Favicon from "../Favicon.astro"
-const {pageTitle, pageDescription, canonical} = Astro.props
-const presentablePageTitle = pageTitle ? " / " + pageTitle : ""
-const presentablePageDescription = pageDescription
-    ? pageDescription
-    : desdinovaConfig.description
+import { AstroSeo } from '@astrolib/seo';
+import Analytics from '../Analytics.astro';
+import desdinovaConfig from '../../config/desdinova-config';
+import Fonts from '../Fonts.astro';
+import Favicon from '../Favicon.astro';
+const { pageTitle, pageDescription, canonical } = Astro.props;
+const presentablePageTitle = pageTitle ? ' / ' + pageTitle : '';
+const presentablePageDescription = pageDescription ? pageDescription : desdinovaConfig.description;
 ---
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--sitemap will be automatically built by @astrojs/sitemap, the following line is required-->
-    <link rel="sitemap" href="/sitemap-index.xml" />
+	<!--sitemap will be automatically built by @astrojs/sitemap, the following line is required-->
+	<link rel="sitemap" href="/sitemap-index.xml" />
 
-    <Favicon />
-    <Fonts />
+	<Favicon />
+	<Fonts />
 
-    <title>{desdinovaConfig.name}{presentablePageTitle}</title>
-    <AstroSeo description={presentablePageDescription} canonical={canonical} />
+	<title>{desdinovaConfig.name}{presentablePageTitle}</title>
+	<AstroSeo description={presentablePageDescription} canonical={canonical} />
 
-    <Analytics />
+	<Analytics />
 
-    <ViewTransitions fallback="swap" />
+	<ViewTransitions fallback="swap" />
 </head>
 
 <script is:inline>
-    // https://jklakus.co.uk/blogs/astro-darktheme
-    const setTheme = () => {
-        const theme = (() => {
-            if (
-                typeof localStorage !== "undefined" &&
-                localStorage.getItem("theme")
-            ) {
-                return localStorage.getItem("theme")
-            }
-            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                return "dark"
-            }
-            return "light"
-        })()
+	// https://jklakus.co.uk/blogs/astro-darktheme
+	const setTheme = () => {
+		const theme = (() => {
+			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+				return localStorage.getItem('theme');
+			}
+			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				return 'dark';
+			}
+			return 'light';
+		})();
 
-        if (theme === "light") {
-            document.documentElement.classList.remove("dark")
-        } else {
-            document.documentElement.classList.add("dark")
-        }
+		if (theme === 'light') {
+			document.documentElement.classList.remove('dark');
+		} else {
+			document.documentElement.classList.add('dark');
+		}
 
-        window.localStorage.setItem("theme", theme || "light")
-    }
+		window.localStorage.setItem('theme', theme || 'light');
+	};
 
-    setTheme()
+	setTheme();
 
-    document.addEventListener("astro:after-swap", setTheme)
+	document.addEventListener('astro:after-swap', setTheme);
 </script>

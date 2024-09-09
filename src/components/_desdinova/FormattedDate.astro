@@ -1,18 +1,18 @@
 ---
-import desdinovaConfig from "../../config/desdinova-config"
+import desdinovaConfig from '../../config/desdinova-config';
 interface Props {
-    date: Date
+	date: Date;
 }
 
-const {date} = Astro.props
+const { date } = Astro.props;
 ---
 
 <time>
-    {
-        new Intl.DateTimeFormat(desdinovaConfig.localeDateString, {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-        }).format(date)
-    }
+	{
+		new Intl.DateTimeFormat(desdinovaConfig.localeDateString, {
+			year: 'numeric',
+			month: 'short',
+			day: 'numeric',
+		}).format(date)
+	}
 </time>

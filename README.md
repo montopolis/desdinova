@@ -229,17 +229,17 @@ This allows specific scripts or HTML to be included as needed per environment.
 
 ```javascript
 {
-    import.meta.env.BUILD_MODE === "production" && (
+    import.meta.env.BUILD_MODE === 'production' && (
         <script>// add scripts here for production only</script>
-    )
+    );
 }
 ```
 
 ```javascript
 {
-    import.meta.env.BUILD_MODE === "production" && (
+    import.meta.env.BUILD_MODE === 'production' && (
         <b>Or put HTML code which only renders for production</b>
-    )
+    );
 }
 ```
 
