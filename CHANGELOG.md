@@ -5,7 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.3.0](https://github.com/montopolis/desdinova/compare/v0.2.1...v0.3.0)
+## [v0.4.0](https://github.com/montopolis/desdinova/compare/v0.3.0...v0.4.0)
+
+### Commits
+
+- add site search [`3b1192f`](https://github.com/montopolis/desdinova/commit/3b1192f3dd332bfb1b6e0544d8affc99ff884c5a)
+- search tweaks [`ab3256b`](https://github.com/montopolis/desdinova/commit/ab3256be41f1721ed29af5c42dc932308778b7c9)
+- Update BlogPostImage to include dynamic width and height props. [`8ff550c`](https://github.com/montopolis/desdinova/commit/8ff550c27bbe86c82746c35f8b11f5b361c4b318)
+- Update SiteLogo component to use actual site url instead of from siteData.url [`21eac1a`](https://github.com/montopolis/desdinova/commit/21eac1a385e25ae0ade5885fd7eac9bc8d56b3d1)
+- add Astro Pagefind link in README.md [`0e8bd1a`](https://github.com/montopolis/desdinova/commit/0e8bd1af4de465a1cd709648f9f49700840c6828)
+- Refactor NavLink.astro [`7fdef15`](https://github.com/montopolis/desdinova/commit/7fdef15d53617809c499a03507d6f5a8ccdb514f)
+- Fix links by removing trailing slashes in blog and blog post layouts. Update styling of "Read More" and "Back" buttons for blog posts. [`4804b15`](https://github.com/montopolis/desdinova/commit/4804b15fb1780c10f4e8602f55453b536d29e065)
+- refactor index & menus to move sample pages to pages/examples [`19653e2`](https://github.com/montopolis/desdinova/commit/19653e24c08d31eed2eab4a93b670ee5579f2bc3)
+- signify draft blog posts when listing, and set all samples posts to draft=true [`9225c9a`](https://github.com/montopolis/desdinova/commit/9225c9aca4f5cbd9856a7609187bf2b86219162b)
+- restructured directories & utility files to signify as desdinova resources making it easier to upgrade in the future [`79c1b0c`](https://github.com/montopolis/desdinova/commit/79c1b0cc61c11ed7d9c03ba8bfc489af10f96bda)
+- set primary button to bg-primary-600 [`1cc3204`](https://github.com/montopolis/desdinova/commit/1cc3204749514e4d0de70da1570c7557ce451202)
+- add external link to astro.build in BottomMenu, update bottom menu styles [`5182f51`](https://github.com/montopolis/desdinova/commit/5182f51f078a7919e145e2a99784d401d662da94)
+- fix styling of SiteLogo if square logo and site title are used [`65596cb`](https://github.com/montopolis/desdinova/commit/65596cb371a01300c565673428fa73ec2ff3d2c4)
+- add postcss.config.cjs [`5f02c9e`](https://github.com/montopolis/desdinova/commit/5f02c9ebef044ebe5cb469275fe122e6e40bf2bc)
+- update astro & dependencies [`f4fe4b0`](https://github.com/montopolis/desdinova/commit/f4fe4b0a409f7578ef3ce1ac3291dd0eff5686d3)
+- remove @rollup/rollup-linux-x64-gnu optionalDependency [`7edd48f`](https://github.com/montopolis/desdinova/commit/7edd48ffe36e00de6a342ee7002bc2cab748138e)
+- set hover of social links to bg-primary-600 [`89e34ce`](https://github.com/montopolis/desdinova/commit/89e34ce080d75efc5131affb43d21043b27915f8)
+- provide configuration setting for copyright year start [`3d418f8`](https://github.com/montopolis/desdinova/commit/3d418f8e8808fa772e9907eb5a983c3fb7d33e4f)
+- remove "All Rights Reserved" since its basically meaningless [`7567b89`](https://github.com/montopolis/desdinova/commit/7567b8973d6e3d7b2f3c5f7ac0d6da09eba78622)
+- do not pretty github action files [`f25f8f5`](https://github.com/montopolis/desdinova/commit/f25f8f582830ff36f07cdb83b9325eecf4258925)
+- pass loading prop to BlogPostImage [`1a6e9e1`](https://github.com/montopolis/desdinova/commit/1a6e9e1b6478ff36cba8f6e783f989c7e0d953d2)
+- fix footer so its correctly responsive [`d9cb3cb`](https://github.com/montopolis/desdinova/commit/d9cb3cb5083026ab5ac663205b6c35e9b0943a43)
+- update to astro 4.15.4 and dependencies [`72e1b4f`](https://github.com/montopolis/desdinova/commit/72e1b4f860abbca411a10d7f7abf007d1491d583)
+
+## [v0.3.0](https://github.com/montopolis/desdinova/compare/v0.2.1...v0.3.0) - 2024-08-30
 
 ### Commits
 
@@ -16,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - updated blog post styling [`7b09fac`](https://github.com/montopolis/desdinova/commit/7b09facf1bce9f9010e48af38f1d5c44be0e3d88)
 - upgrade to astro 4.15.1 [`c665063`](https://github.com/montopolis/desdinova/commit/c665063209a57db0a031b895081727959e7a5c60)
 - new sample blog posts [`af68f31`](https://github.com/montopolis/desdinova/commit/af68f313d5de7e5fd6442d98ebec7496ee8e0b9f)
-- update Footer and Header to use desdinovaConfig.colors.mainBackground [`7d7c2b0`](https://github.com/montopolis/desdinova/commit/7d7c2b0a0c0435eead7a9c830da18458b705b5de)
+- update Footer and Header to use siteData.colors.mainBackground [`7d7c2b0`](https://github.com/montopolis/desdinova/commit/7d7c2b0a0c0435eead7a9c830da18458b705b5de)
 - update MarkdownLayout to use tailwind typography and fix width [`1a65d74`](https://github.com/montopolis/desdinova/commit/1a65d74050518ff619ea36aa4dba4cc4ae5963fd)
 - fix styling of Announcement [`4bafe52`](https://github.com/montopolis/desdinova/commit/4bafe5223bc3979952b0046e22818d8128586c4f)
 - update default url [`33a1188`](https://github.com/montopolis/desdinova/commit/33a118832a3ac328ecd989ce66d5fb170ccef573)
@@ -24,6 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - document ascending/descending blog post date sort [`6a3d8b5`](https://github.com/montopolis/desdinova/commit/6a3d8b5edea0bcea665276cdbfa1ed1aade75750)
 - update README [`ccd472c`](https://github.com/montopolis/desdinova/commit/ccd472ce73e25ad9880648e47bb31da0a515b4d5)
 - update error message on failing blog post image [`b65a0a2`](https://github.com/montopolis/desdinova/commit/b65a0a20ffb38d2df195f62e0435c9001759b78b)
+- Release v0.3.0 [`94b572f`](https://github.com/montopolis/desdinova/commit/94b572f9b0752024e0fabdfa4b2c4610a6c8a9ea)
 
 ## [v0.2.1](https://github.com/montopolis/desdinova/compare/v0.2.0...v0.2.1) - 2024-08-29
 
@@ -56,12 +85,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fix active/inactive menu links in prod [`b322ce4`](https://github.com/montopolis/desdinova/commit/b322ce4178e072c39b8782b44b881131c0f1ed5e)
 - move newsletter signup component to Company page [`e740884`](https://github.com/montopolis/desdinova/commit/e74088437a81cac5d21329ab7a9de70e88d4a879)
 - add basic 404 [`0581926`](https://github.com/montopolis/desdinova/commit/058192628e18b759c31e0546d83c016d57c90efc)
-- moved site config from site.config.mjs to config/desdinova-config.ts [`f0b6084`](https://github.com/montopolis/desdinova/commit/f0b60841263679487b151c827e1579061003e975)
+- moved site config from site.config.mjs to config/siteData.ts [`f0b6084`](https://github.com/montopolis/desdinova/commit/f0b60841263679487b151c827e1579061003e975)
 - remove no longer needed script [`ffd938c`](https://github.com/montopolis/desdinova/commit/ffd938cec9216560293a52c7654d2d7912e1f8de)
 - better way to implement view transition support for flowbite [`28315ff`](https://github.com/montopolis/desdinova/commit/28315ff7233a7a382cf555425578535f0c1346bd)
-- blog now shows posts in desc order, updated to use new desdinovaConfig [`6b4cd09`](https://github.com/montopolis/desdinova/commit/6b4cd09f1ffd9dc50ffe800b3af4de2523fabbc0)
+- blog now shows posts in desc order, updated to use new siteData [`6b4cd09`](https://github.com/montopolis/desdinova/commit/6b4cd09f1ffd9dc50ffe800b3af4de2523fabbc0)
 - new Announcements banner [`355ca9d`](https://github.com/montopolis/desdinova/commit/355ca9dc1fef346dde5451a2308f14b6167ad531)
-- new home page, updated to use new desdinovaConfig [`0816642`](https://github.com/montopolis/desdinova/commit/081664203e45e3d1896e58236b975edc4480f23e)
+- new home page, updated to use new siteData [`0816642`](https://github.com/montopolis/desdinova/commit/081664203e45e3d1896e58236b975edc4480f23e)
 - increase font on privacy page [`8086fef`](https://github.com/montopolis/desdinova/commit/8086fef70a18280159e3dc20ea25388c7f4eabc7)
 - upgrade to astro 4.14.6 [`3f5aed2`](https://github.com/montopolis/desdinova/commit/3f5aed2224519032d49d6de72119496a90017fa2)
 - add canonical passthru for pages [`10b7a5e`](https://github.com/montopolis/desdinova/commit/10b7a5e927686024b6aa1d7eb7ce262bdb6eb6ec)
@@ -69,9 +98,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - canonical passthrough, new light/dark mode switch [`30e9457`](https://github.com/montopolis/desdinova/commit/30e9457c7f7f5ac0173f1ffec7b8801ae0f87b11)
 - more flowbite & view transitions work [`129853a`](https://github.com/montopolis/desdinova/commit/129853aac183829777bbd476f67e8e3837df470d)
 - tweak astro config [`a7fab0c`](https://github.com/montopolis/desdinova/commit/a7fab0c14637bee4dcba9d1157ac478f1810c08b)
-- cleanup of desdinovaConfig [`03e26d9`](https://github.com/montopolis/desdinova/commit/03e26d9b677ee415b276233f697e8bd1c6f62513)
+- cleanup of siteData [`03e26d9`](https://github.com/montopolis/desdinova/commit/03e26d9b677ee415b276233f697e8bd1c6f62513)
 - updated README [`bd8c866`](https://github.com/montopolis/desdinova/commit/bd8c86626fb28d3854ff660fe77d5182a5fc49ce)
-- update Copyright to use desdinovaConfig.companyUrl [`6a98340`](https://github.com/montopolis/desdinova/commit/6a98340caed28b4dfc03059e0b90b0b5207da39a)
+- update Copyright to use siteData.companyUrl [`6a98340`](https://github.com/montopolis/desdinova/commit/6a98340caed28b4dfc03059e0b90b0b5207da39a)
 - responsive updates [`6bba134`](https://github.com/montopolis/desdinova/commit/6bba134503b0a34230215332c1bf27000add99c0)
 - index.astro color update [`7bc02d2`](https://github.com/montopolis/desdinova/commit/7bc02d245f1e5e7d72eed22980dbcf17295ee2cf)
 - Release v0.2.0 [`d62cf50`](https://github.com/montopolis/desdinova/commit/d62cf50bd3b0392047d7593ca3a842cfcf189d3c)
