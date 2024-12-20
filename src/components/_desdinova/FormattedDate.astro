@@ -5,6 +5,9 @@ interface Props {
 }
 
 const { date } = Astro.props;
+
+// Adjust the date to account for timezone differences
+const correctedDate = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
 ---
 
 <time>
@@ -13,6 +16,6 @@ const { date } = Astro.props;
 			year: 'numeric',
 			month: 'short',
 			day: 'numeric',
-		}).format(date)
+		}).format(correctedDate)
 	}
 </time>

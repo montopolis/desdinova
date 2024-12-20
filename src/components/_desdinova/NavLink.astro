@@ -1,6 +1,6 @@
 ---
-import desdinovaConfig from '../../config/desdinova-config';
 import { Icon } from 'astro-icon/components';
+import desdinovaConfig from '../../config/desdinova-config';
 
 const pathname = new URL(Astro.request.url).pathname;
 const url = new URL(Astro.props.href, Astro.url);
@@ -20,22 +20,24 @@ const isExternal = url.host !== Astro.url.host;
 const isActive: boolean = pathname === path;
 ---
 
-<a
-	href={href}
-	title={title}
-	aria-current={isActive ? 'page' : null}
-	rel={isExternal ? 'noopener' : null}
-	target={target}
-	class={isActive
-		? isTop
-			? desdinovaConfig.colors.activeTopMenuClass
-			: desdinovaConfig.colors.activeBottomMenuClass
-		: isTop
-			? desdinovaConfig.colors.inactiveTopMenuClass
-			: desdinovaConfig.colors.inactiveBottomMenuClass}
-	role="button"
->
-	{icon !== '' && <Icon name={icon} class="mr-1" />}
-	{title}
-	{isExternal && <Icon name="tabler:external-link" class="ml-1" />}
-</a>
+<div class="grid items-center align-middle">
+	<a
+		href={href}
+		title={title}
+		aria-current={isActive ? 'page' : null}
+		rel={isExternal ? 'noopener' : null}
+		target={target}
+		class={isActive
+			? isTop
+				? desdinovaConfig.colors.activeTopMenuClass
+				: desdinovaConfig.colors.activeBottomMenuClass
+			: isTop
+				? desdinovaConfig.colors.inactiveTopMenuClass
+				: desdinovaConfig.colors.inactiveBottomMenuClass}
+		role="button"
+	>
+		{icon !== '' && <Icon name={icon} class="mr-1 h-5 w-5" />}
+		{title}
+		{isExternal && <Icon name="tabler:external-link" class="ml-1 h-5 w-5" />}
+	</a>
+</div>
