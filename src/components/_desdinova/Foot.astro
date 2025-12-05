@@ -2,10 +2,13 @@
 
 ---
 
-<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+<script>
+	import { initFlowbite } from 'flowbite';
 
-<script is:inline>
-	// this is needed so flowbite js library works with view transitions
+	// Initialize on first load
+	initFlowbite();
+
+	// Re-initialize after Astro view transitions
 	// TODO: https://astro.build/blog/future-of-astro-zero-js-view-transitions/
 	document.addEventListener('astro:after-swap', () => {
 		initFlowbite();
