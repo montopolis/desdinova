@@ -33,13 +33,14 @@ const combinedClassesFullLogo = `${defaultClassFullLogo} ${classText}`;
 				src={LogoSquare}
 				width={64}
 				height={64}
+				densities={[1, 2]}
 				loading={loading}
 				class="mr-3 mt-1 inline"
 				alt={alt}
 			/>
 			<span class={combinedClassesSquareLogo}>{desdinovaConfig.name}</span>
 		) : (
-			<Image src={Logo} alt={alt} width={175} loading={loading} class={combinedClassesFullLogo} />
+			<Image src={Logo} alt={alt} width={175} densities={[1, 2]} loading={loading} class={combinedClassesFullLogo} />
 		)}
 	</a>
 </div>
