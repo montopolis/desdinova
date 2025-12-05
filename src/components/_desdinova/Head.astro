@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 import { AstroSeo } from '@astrolib/seo';
 import Analytics from '../Analytics.astro';
@@ -26,7 +26,7 @@ const presentablePageDescription = pageDescription ? pageDescription : desdinova
 
 	<Analytics />
 
-	<ViewTransitions fallback="swap" />
+	<ClientRouter fallback="swap" />
 </head>
 
 <script is:inline>
