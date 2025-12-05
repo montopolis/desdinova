@@ -14,7 +14,9 @@ const { pageTitle, pageDescription, canonical } = Astro.props;
 
 	<body class={desdinovaConfig.colors.mainBackground}>
 		<Header />
-		<slot />
+		<main>
+			<slot />
+		</main>
 		<Footer />
 	</body><Foot />
 </html>
