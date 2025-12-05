@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Plugins */
+@plugin "@tailwindcss/typography";
+@plugin "flowbite/plugin";
+
+/* Source paths for class scanning (Flowbite components) */
+@source "../../node_modules/flowbite/**/*.js";
+
+/* Safelist for dynamically generated classes (Flowbite datepicker, etc.) */
+@source inline("w-64 w-1/2 rounded-l-lg rounded-r-lg bg-gray-200 grid-cols-4 grid-cols-7 h-6 leading-6 h-9 leading-9 shadow-lg");
+
+/* Theme customization */
+@theme {
+	/* Primary color palette */
+	--color-primary-50: #eff6ff;
+	--color-primary-100: #dbeafe;
+	--color-primary-200: #bfdbfe;
+	--color-primary-300: #93c5fd;
+	--color-primary-400: #60a5fa;
+	--color-primary-500: #3b82f6;
+	--color-primary-600: #2563eb;
+	--color-primary-700: #1d4ed8;
+	--color-primary-800: #1e40af;
+	--color-primary-900: #1e3a8a;
+	--color-primary-950: #172554;
+
+	/* Accent colors (indigo) */
+	--color-accent-50: var(--color-indigo-50);
+	--color-accent-100: var(--color-indigo-100);
+	--color-accent-200: var(--color-indigo-200);
+	--color-accent-300: var(--color-indigo-300);
+	--color-accent-400: var(--color-indigo-400);
+	--color-accent-500: var(--color-indigo-500);
+	--color-accent-600: var(--color-indigo-600);
+	--color-accent-700: var(--color-indigo-700);
+	--color-accent-800: var(--color-indigo-800);
+	--color-accent-900: var(--color-indigo-900);
+	--color-accent-950: var(--color-indigo-950);
+
+	/* Gray scale (slate) */
+	--color-gray-50: var(--color-slate-50);
+	--color-gray-100: var(--color-slate-100);
+	--color-gray-200: var(--color-slate-200);
+	--color-gray-300: var(--color-slate-300);
+	--color-gray-400: var(--color-slate-400);
+	--color-gray-500: var(--color-slate-500);
+	--color-gray-600: var(--color-slate-600);
+	--color-gray-700: var(--color-slate-700);
+	--color-gray-800: var(--color-slate-800);
+	--color-gray-900: var(--color-slate-900);
+	--color-gray-950: var(--color-slate-950);
+
+	/* Custom fonts */
+	--font-body: "Aleo Variable";
+	--font-sans: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-serif: "Aleo Variable", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+	--font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
